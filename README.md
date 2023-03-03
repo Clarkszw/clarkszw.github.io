@@ -1,3 +1,11 @@
-# clarkszw.github.io
-Let me try to build a website for my profile :)
-Project Listings - [BestMarket](./R/BestMarket/BestMarket.html)
+# Project Portfolio for Data Analyst
+
+## Zhiwen Shi
+
+### R
+
+[BestMarket](./R/BestMarket/BestMarket.html)
+
+[API](./R/API/APIfunction.Rmd)
+
+[book_reviews](./R/book_reviews/book_review.html)
