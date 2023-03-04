@@ -1,8 +1,6 @@
 # Project Portfolio for Data Analyst
 
-## Zhiwen Shi
-
-### R
+## R
 
 [BestMarket](./R/BestMarket/BestMarket.html)
 
@@ -34,12 +32,12 @@
 
 [Spam](./R/Spam/Spam.html)
 
-### Python
+## Python
 
-[eBay Car Sales](./Python/eBay%20Car%20Sales/ebay%20Car%20Sales.ipynb)
+[eBay Car Sales (download Jupyter)](./Python/eBay%20Car%20Sales/ebay%20Car%20Sales.ipynb)
 
-[Hacker News](./Python/hacker%20news/hacker_news.ipynb)
+[Hacker News (download Jupyter)](./Python/hacker%20news/hacker_news.ipynb)
 
-[Prison Break](./Python/Prison%20Break/Basics.ipynb)
+[Prison Break (download Jupyter)](./Python/Prison%20Break/Basics.ipynb)
 
 [Profitable App Profiles](./Python/Profitable%20App%20Profiles/Profitable%20App%20Profiles.html)
