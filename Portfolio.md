@@ -2,9 +2,9 @@
 layout: default
 ---
 
-Portfolio in Data Analysis
+# Portfolio in Data Analysis
 
-### [Go back to Clark's code nest](./)
+### [Go back to Clark's code nest.](./)
 
 ---
 

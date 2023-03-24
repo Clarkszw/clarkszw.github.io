@@ -3,8 +3,7 @@ layout: default
 ---
 
 Hi, I am Zhiwen Shi, you can call me Clark.
-
-My Github name is: clarkszw
+My Github username is: [clarkszw](https://github.com/Clarkszw)
 
 # [Project Portfolio for Data Analyst](./Portfolio.html)
 
@@ -14,7 +13,7 @@ All the projects in R is exported as HTML, which can be accessed directly from t
 
 For Python, I used Jyputer, therefore these files need to be downloaded to view.
 
-[Come in here].(./Portfolio.html)
+### [Come in here.](./Portfolio.html)
 
 # [GSoC 2023](https://summerofcode.withgoogle.com/)
 
