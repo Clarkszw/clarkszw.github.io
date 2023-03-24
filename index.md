@@ -15,6 +15,8 @@ For Python, I used Jyputer, therefore these files need to be downloaded to view.
 
 ### [Come in here.](./Portfolio.html)
 
+---
+
 # [GSoC 2023](https://summerofcode.withgoogle.com/)
 
 Google Summer of Code is a global, online program focused on bringing new contributors into open source software development. GSoC Contributors work with an open source organization on a 12+ week programming project under the guidance of mentors.

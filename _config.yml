@@ -7,3 +7,8 @@ description: a blog for programming project and a place to show the result.
 
 show_downloads: false
 google_analytics: [Your Google Analytics tracking ID]
+
+github:
+  is_project_page: True
+  owner_url: https://github.com/Clarkszw
+  owner_name: Clark (Zhiwen Shi)
