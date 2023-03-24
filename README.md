@@ -1,6 +1,6 @@
-# Project Portfolio for Data Analyst
+## Project Portfolio for Data Analyst
 
-## R
+### R
 
 [BestMarket](./R/BestMarket/BestMarket.html)
 
@@ -32,7 +32,7 @@
 
 [Spam](./R/Spam/Spam.html)
 
-## Python
+### Python
 
 [eBay Car Sales (download Jupyter)](./Python/eBay%20Car%20Sales/ebay%20Car%20Sales.ipynb)
 
@@ -41,5 +41,3 @@
 [Prison Break (download Jupyter)](./Python/Prison%20Break/Basics.ipynb)
 
 [Profitable App Profiles](./Python/Profitable%20App%20Profiles/Profitable%20App%20Profiles.html)
-
-# GSoC blog
