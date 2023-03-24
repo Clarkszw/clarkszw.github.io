@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 Hi, I am Zhiwen Shi, you can call me Clark. My Github name is: clarkszw
 
 # Project Portfolio for Data Analyst
