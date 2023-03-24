@@ -41,3 +41,5 @@
 [Prison Break (download Jupyter)](./Python/Prison%20Break/Basics.ipynb)
 
 [Profitable App Profiles](./Python/Profitable%20App%20Profiles/Profitable%20App%20Profiles.html)
+
+# GSoC blog
