@@ -12,9 +12,9 @@ layout: default
 
 [BestMarket](./R/BestMarket/BestMarket.html)
 
-[book sales data](./R/book_sales_data/Book_sales.html)
+[Book sales data](./R/book_sales_data/Book_sales.html)
 
-[book reviews](./R/book_reviews/book_review.html)
+[Book reviews](./R/book_reviews/book_review.html)
 
 [Chinook](./R/Chinook/Chinook.html)
 
@@ -42,9 +42,9 @@ layout: default
 
 ## Python
 
-[eBay Car Sales (download Jupyter)](./Python/eBay%20Car%20Sales/ebay%20Car%20Sales.ipynb)
+[eBay Car Sales Data Exploration](./Python/eBay%20Car%20Sales/ebay%20Car%20Sales.html)
 
-[Hacker News (download Jupyter)](./Python/hacker%20news/hacker_news.ipynb)
+[Hacker News](./Python/hacker%20news/hacker_news.html)
 
 [Prison Break](./Python/Prison%20Break/PrisenBreak.html)
 
