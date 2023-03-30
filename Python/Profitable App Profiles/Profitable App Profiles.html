@@ -36,6 +36,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 .highlight .m { color: var(--jp-mirror-editor-number-color) } /* Literal.Number */
 .highlight .s { color: var(--jp-mirror-editor-string-color) } /* Literal.String */
 .highlight .ow { color: var(--jp-mirror-editor-operator-color); font-weight: bold } /* Operator.Word */
+.highlight .pm { color: var(--jp-mirror-editor-punctuation-color) } /* Punctuation.Marker */
 .highlight .w { color: var(--jp-mirror-editor-variable-color) } /* Text.Whitespace */
 .highlight .mb { color: var(--jp-mirror-editor-number-color) } /* Literal.Number.Bin */
 .highlight .mf { color: var(--jp-mirror-editor-number-color) } /* Literal.Number.Float */
@@ -14464,10 +14465,6 @@ a.anchor-link {
   display: none;
 }
 
-.highlight  {
-  margin: 0.4em;
-}
-
 /* Input area styling */
 .jp-InputArea {
   overflow: hidden;
@@ -14477,9 +14474,26 @@ a.anchor-link {
   overflow: hidden;
 }
 
-.CodeMirror pre {
+.CodeMirror.cm-s-jupyter .highlight pre {
+/* weird, but --jp-code-padding defined to be 5px but 4px horizontal padding is hardcoded for pre.CodeMirror-line */
+  padding: var(--jp-code-padding) 4px;
   margin: 0;
-  padding: 0;
+
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+
+}
+
+.jp-OutputArea-output pre {
+  line-height: inherit;
+  font-family: inherit;
+}
+
+.jp-RenderedText pre {
+  color: var(--jp-content-font-color1);
+  font-size: var(--jp-code-font-size);
 }
 
 /* Using table instead of flexbox so that we can use break-inside property */
@@ -14525,6 +14539,10 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
   display: none;
 }
 
+@page {
+    margin: 0.5in; /* Margin for each printed piece of paper */
+}
+
 @media print {
   .jp-Cell-inputWrapper,
   .jp-Cell-outputWrapper {
@@ -14559,12 +14577,12 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
                 },
                 displayAlign: 'center',
                 CommonHTML: {
-                    linebreaks: { 
-                    automatic: true 
+                    linebreaks: {
+                    automatic: true
                     }
                 }
             });
-        
+
             MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
         }
     }
@@ -14573,7 +14591,21 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
     <!-- End of mathjax configuration --></head>
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
 
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div id="cell-id=61e29561" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Description">Description<a class="anchor-link" href="#Description">&#182;</a></h3><p>This is the second of my project reports from my portfolio. It applies native functions for analysis, meaning no help from <code>numpy</code> and <code>pandas</code>.</p>
+<p>The project is a data analysis about popular apps in both App Store and Google Play Market by Python.</p>
+<p>The skills are covering data extraction, data cleaning, data process and strategy proposal.</p>
+
+</div>
+</div>
+</div>
+</div>
+<div id="cell-id=ed939f03" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -14582,7 +14614,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <h1 id="Profitable-App-Profiles-for-the-App-Store-and-Google-Play-Markets">Profitable App Profiles for the App Store and Google Play Markets<a class="anchor-link" href="#Profitable-App-Profiles-for-the-App-Store-and-Google-Play-Markets">&#182;</a></h1><p>Our aim in this project is to find mobile app profiles that are profitable for the App Store and Google Play markets. We're working as data analysts for a company that builds Android and iOS mobile apps, and our job is to enable our team of developers to make data-driven decisions with respect to the kind of apps they build.</p>
 <p>At our company, we only build apps that are free to download and install, and our main source of revenue consists of in-app ads. This means that our revenue for any given app is mostly influenced by the number of users that use our app. Our goal for this project is to analyze data to help our developers understand what kinds of apps are likely to attract more users.</p>
 <h2 id="Opening-and-Exploring-the-Data">Opening and Exploring the Data<a class="anchor-link" href="#Opening-and-Exploring-the-Data">&#182;</a></h2><p>As of September 2018, there were approximately 2 million iOS apps available on the App Store, and 2.1 million Android apps on Google Play.</p>
-<p><img src="https://s3.amazonaws.com/dq-content/350/py1m8_statista.png" alt="img"> Source: <a href="https://www.statista.com/statistics/276623/number-of-apps-available-in-leading-app-stores/">Statista</a></p>
+<p><img src="https://s3.amazonaws.com/dq-content/350/py1m8_statista.png" alt="img" /> Source: <a href="https://www.statista.com/statistics/276623/number-of-apps-available-in-leading-app-stores/">Statista</a></p>
 <p>Collecting data for over four million apps requires a significant amount of time and money, so we'll try to analyze a sample of data instead. To avoid spending resources with collecting new data ourselves, we should first try to see whether we can find any relevant existing data at no cost. Luckily, these are two data sets that seem suitable for our purpose:</p>
 <p>A <a href="https://www.kaggle.com/lava18/google-play-store-apps">data set</a> containing data about approximately ten thousand Android apps from Google Play. You can download the data set directly from this <a href="https://dq-content.s3.amazonaws.com/350/googleplaystore.csv">link</a>.</p>
 <p>A <a href="https://www.kaggle.com/ramamet4/app-store-apple-data-set-10k-apps">data set</a> containing data about approximately seven thousand iOS apps from the App Store. You can download the data set directly from this <a href="https://dq-content.s3.amazonaws.com/350/AppleStore.csv">link</a>.</p>
@@ -14591,7 +14623,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div id="cell-id=157a9df3" class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -14602,14 +14634,14 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">csv</span> <span class="kn">import</span> <span class="n">reader</span>
 
 <span class="c1">### The Google Play data set ###</span>
-<span class="n">opened_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;googleplaystore.csv&#39;</span><span class="p">)</span>
+<span class="n">opened_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;googleplaystore.csv&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
 <span class="n">read_file</span> <span class="o">=</span> <span class="n">reader</span><span class="p">(</span><span class="n">opened_file</span><span class="p">)</span>
 <span class="n">android</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">read_file</span><span class="p">)</span>
 <span class="n">android_header</span> <span class="o">=</span> <span class="n">android</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 <span class="n">android</span> <span class="o">=</span> <span class="n">android</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
 
 <span class="c1">### The App Store data set ###</span>
-<span class="n">opened_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;AppleStore.csv&#39;</span><span class="p">)</span>
+<span class="n">opened_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;AppleStore.csv&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
 <span class="n">read_file</span> <span class="o">=</span> <span class="n">reader</span><span class="p">(</span><span class="n">opened_file</span><span class="p">)</span>
 <span class="n">ios</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">read_file</span><span class="p">)</span>
 <span class="n">ios_header</span> <span class="o">=</span> <span class="n">ios</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
@@ -14622,7 +14654,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div id="cell-id=0a5fcad2" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -14633,7 +14665,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div id="cell-id=689ba3f1" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -14667,9 +14699,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
 <div class="jp-OutputArea-child">
-
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
@@ -14698,7 +14728,7 @@ Number of columns: 13
 </div>
 
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div id="cell-id=2e70d325" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -14710,7 +14740,7 @@ Number of columns: 13
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div id="cell-id=adb8a019" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -14734,9 +14764,7 @@ Number of columns: 13
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
 <div class="jp-OutputArea-child">
-
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
@@ -14765,7 +14793,7 @@ Number of columns: 16
 </div>
 
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div id="cell-id=6d08d6be" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -14777,7 +14805,7 @@ Number of columns: 16
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div id="cell-id=fd3dba66" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -14802,9 +14830,7 @@ Number of columns: 16
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
 <div class="jp-OutputArea-child">
-
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
@@ -14825,18 +14851,18 @@ Number of columns: 16
 </div>
 
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div id="cell-id=c25cff72" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>The row 10472 corresponds to the app Life Made WI-Fi Touchscreen Photo Frame, and we can see that the rating is 19. This is clearly off because the maximum rating for a Google Play app is 5 (as mentioned in the <a href="https://www.kaggle.com/lava18/google-play-store-apps/discussion/66015">discussions section</a>, this problem is caused by a missing value in the 'Category' column). As a consequence, we'll delete this row.</p>
+<p>The row 10472 corresponds to the app &quot;Life Made WI-Fi Touchscreen Photo Frame&quot;, and we can see that the rating is 19. This is clearly off because the maximum rating for a Google Play app is 5 (as mentioned in the <a href="https://www.kaggle.com/lava18/google-play-store-apps/discussion/66015">discussions section</a>, this problem is caused by a missing value in the 'Category' column). As a consequence, we'll delete this row.</p>
 
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div id="cell-id=d4e6b73d" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -14860,9 +14886,7 @@ Number of columns: 16
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
 <div class="jp-OutputArea-child">
-
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
@@ -14879,7 +14903,7 @@ Number of columns: 16
 </div>
 
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div id="cell-id=f6434268" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -14890,7 +14914,7 @@ Number of columns: 16
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div id="cell-id=06c50c2f" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -14915,9 +14939,7 @@ Number of columns: 16
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
 <div class="jp-OutputArea-child">
-
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
@@ -14935,7 +14957,7 @@ Number of columns: 16
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div id="cell-id=766d0884" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -14969,9 +14991,7 @@ Number of columns: 16
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
 <div class="jp-OutputArea-child">
-
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
@@ -14989,8 +15009,57 @@ Examples of duplicate apps: [&#39;Quick PDF Scanner + OCR FREE&#39;, &#39;Box&#3
 
 </div>
 
+</div><div id="cell-id=596b5aee" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># we can achieve it with dictionary as well</span>
+<span class="n">app_duplicated</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="k">for</span> <span class="n">app</span> <span class="ow">in</span> <span class="n">android</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">app</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">in</span> <span class="n">app_duplicated</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+        <span class="n">app_duplicated</span><span class="p">[</span><span class="n">app</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">app_duplicated</span><span class="p">[</span><span class="n">app</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Number of duplicate apps:&#39;</span><span class="p">,</span> <span class="nb">sum</span><span class="p">(</span><span class="n">app_duplicated</span><span class="o">.</span><span class="n">values</span><span class="p">()))</span>
+<span class="n">non_zero_keys</span> <span class="o">=</span> <span class="p">[</span><span class="n">key</span> <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">app_duplicated</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">value</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Examples of duplicate apps:&#39;</span><span class="p">,</span> <span class="nb">list</span><span class="p">(</span><span class="n">non_zero_keys</span><span class="p">)[:</span><span class="mi">15</span><span class="p">])</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Number of duplicate apps: 1181
+Examples of duplicate apps: [&#39;Coloring book moana&#39;, &#39;Mcqueen Coloring pages&#39;, &#39;UNICORN - Color By Number &amp; Pixel Art Coloring&#39;, &#39;Textgram - write on photos&#39;, &#39;Wattpad 📖 Free Books&#39;, &#39;Amazon Kindle&#39;, &#39;Dictionary - Merriam-Webster&#39;, &#39;NOOK: Read eBooks &amp; Magazines&#39;, &#39;Oxford Dictionary of English : Free&#39;, &#39;Spanish English Translator&#39;, &#39;NOOK App for NOOK Devices&#39;, &#39;Ebook Reader&#39;, &#39;English Dictionary - Offline&#39;, &#39;Docs To Go™ Free Office Suite&#39;, &#39;Google My Business&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div id="cell-id=88c46a3a" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -15008,12 +15077,12 @@ Examples of duplicate apps: [&#39;Quick PDF Scanner + OCR FREE&#39;, &#39;Box&#3
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div id="cell-id=c2386dd2" class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">reviews_max</span> <span class="o">=</span> <span class="p">{}</span>
@@ -15035,7 +15104,7 @@ Examples of duplicate apps: [&#39;Quick PDF Scanner + OCR FREE&#39;, &#39;Box&#3
 </div>
 
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div id="cell-id=85533deb" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -15046,12 +15115,12 @@ Examples of duplicate apps: [&#39;Quick PDF Scanner + OCR FREE&#39;, &#39;Box&#3
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div id="cell-id=0def272b" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Expected length:&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">android</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1181</span><span class="p">)</span>
@@ -15069,9 +15138,7 @@ Examples of duplicate apps: [&#39;Quick PDF Scanner + OCR FREE&#39;, &#39;Box&#3
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
 <div class="jp-OutputArea-child">
-
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
@@ -15088,7 +15155,7 @@ Actual length: 9659
 </div>
 
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div id="cell-id=db6b19af" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -15111,12 +15178,12 @@ Actual length: 9659
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div id="cell-id=6b5dd473" class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">android_clean</span> <span class="o">=</span> <span class="p">[]</span>
@@ -15138,7 +15205,7 @@ Actual length: 9659
 </div>
 
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div id="cell-id=0b522662" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -15149,12 +15216,12 @@ Actual length: 9659
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div id="cell-id=3d89c759" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">explore_data</span><span class="p">(</span><span class="n">android_clean</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
@@ -15171,9 +15238,7 @@ Actual length: 9659
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
 <div class="jp-OutputArea-child">
-
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
@@ -15199,7 +15264,7 @@ Number of columns: 13
 </div>
 
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div id="cell-id=04d6b0fb" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -15210,12 +15275,12 @@ Number of columns: 13
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div id="cell-id=4a0617b0" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">ios</span><span class="p">[</span><span class="mi">813</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span>
@@ -15236,9 +15301,7 @@ Number of columns: 13
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
 <div class="jp-OutputArea-child">
-
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
@@ -15257,7 +15320,7 @@ Number of columns: 13
 </div>
 
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div id="cell-id=938aaba6" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -15270,12 +15333,12 @@ Number of columns: 13
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div id="cell-id=71fdbe3a" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">is_english</span><span class="p">(</span><span class="n">string</span><span class="p">):</span>
@@ -15301,9 +15364,7 @@ Number of columns: 13
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
 <div class="jp-OutputArea-child">
-
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
@@ -15320,7 +15381,7 @@ False
 </div>
 
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div id="cell-id=782babc2" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -15331,12 +15392,12 @@ False
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div id="cell-id=2e8e2eb0" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">is_english</span><span class="p">(</span><span class="s1">&#39;Docs To Go™ Free Office Suite&#39;</span><span class="p">))</span>
@@ -15357,9 +15418,7 @@ False
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
 <div class="jp-OutputArea-child">
-
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
@@ -15378,7 +15437,7 @@ False
 </div>
 
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div id="cell-id=ca7096b9" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -15389,12 +15448,12 @@ False
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div id="cell-id=bf000e23" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">is_english</span><span class="p">(</span><span class="n">string</span><span class="p">):</span>
@@ -15424,9 +15483,7 @@ False
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
 <div class="jp-OutputArea-child">
-
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
@@ -15443,7 +15500,7 @@ True
 </div>
 
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div id="cell-id=fb7bf173" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -15455,12 +15512,12 @@ True
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div id="cell-id=d112c7f2" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">android_english</span> <span class="o">=</span> <span class="p">[]</span>
@@ -15492,9 +15549,7 @@ True
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
 <div class="jp-OutputArea-child">
-
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
@@ -15533,7 +15588,7 @@ Number of columns: 16
 </div>
 
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div id="cell-id=16f09053" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -15545,12 +15600,12 @@ Number of columns: 16
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div id="cell-id=e25ca026" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">android_final</span> <span class="o">=</span> <span class="p">[]</span>
@@ -15581,9 +15636,7 @@ Number of columns: 16
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
 <div class="jp-OutputArea-child">
-
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
@@ -15600,7 +15653,7 @@ Number of columns: 16
 </div>
 
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div id="cell-id=64d32234" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -15625,12 +15678,12 @@ Number of columns: 16
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div id="cell-id=f5c4f1eb" class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">freq_table</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span> <span class="n">index</span><span class="p">):</span>
@@ -15671,7 +15724,7 @@ Number of columns: 16
 </div>
 
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div id="cell-id=b29b4845" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -15682,12 +15735,12 @@ Number of columns: 16
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div id="cell-id=ec1b146b" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">display_table</span><span class="p">(</span><span class="n">ios_final</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">)</span>
@@ -15704,9 +15757,7 @@ Number of columns: 16
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
 <div class="jp-OutputArea-child">
-
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
@@ -15744,7 +15795,7 @@ Catalogs : 0.12414649286157665
 </div>
 
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div id="cell-id=66354fab" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -15757,12 +15808,12 @@ Catalogs : 0.12414649286157665
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div id="cell-id=d0597006" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">display_table</span><span class="p">(</span><span class="n">android_final</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="c1"># Category</span>
@@ -15779,9 +15830,7 @@ Catalogs : 0.12414649286157665
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
 <div class="jp-OutputArea-child">
-
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
@@ -15829,7 +15878,7 @@ BEAUTY : 0.5979241877256317
 </div>
 
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div id="cell-id=97bb5739" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -15842,12 +15891,12 @@ BEAUTY : 0.5979241877256317
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div id="cell-id=9d6c712c" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">display_table</span><span class="p">(</span><span class="n">android_final</span><span class="p">,</span> <span class="o">-</span><span class="mi">4</span><span class="p">)</span>
@@ -15864,9 +15913,7 @@ BEAUTY : 0.5979241877256317
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
 <div class="jp-OutputArea-child">
-
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
@@ -15995,7 +16042,7 @@ Adventure;Education : 0.01128158844765343
 </div>
 
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div id="cell-id=2a7603ec" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -16009,12 +16056,12 @@ Adventure;Education : 0.01128158844765343
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div id="cell-id=fbd7c299" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">genres_ios</span> <span class="o">=</span> <span class="n">freq_table</span><span class="p">(</span><span class="n">ios_final</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">)</span>
@@ -16043,9 +16090,7 @@ Adventure;Education : 0.01128158844765343
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
 <div class="jp-OutputArea-child">
-
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
@@ -16083,7 +16128,7 @@ Medical : 612.0
 </div>
 
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div id="cell-id=6a0995d5" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -16094,12 +16139,12 @@ Medical : 612.0
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div id="cell-id=a8df50f9" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">app</span> <span class="ow">in</span> <span class="n">ios_final</span><span class="p">:</span>
@@ -16118,9 +16163,7 @@ Medical : 612.0
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
 <div class="jp-OutputArea-child">
-
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
@@ -16141,7 +16184,7 @@ Railway Route Search : 5
 </div>
 
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div id="cell-id=32d16c7c" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -16154,12 +16197,12 @@ Railway Route Search : 5
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div id="cell-id=6b100536" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">app</span> <span class="ow">in</span> <span class="n">ios_final</span><span class="p">:</span>
@@ -16178,9 +16221,7 @@ Railway Route Search : 5
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
 <div class="jp-OutputArea-child">
-
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
@@ -16213,7 +16254,7 @@ Jishokun-Japanese English Dictionary &amp; Translator : 0
 </div>
 
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div id="cell-id=ebab5dc7" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -16236,12 +16277,12 @@ Jishokun-Japanese English Dictionary &amp; Translator : 0
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div id="cell-id=73ab581a" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[26]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">display_table</span><span class="p">(</span><span class="n">android_final</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="c1"># the Installs columns</span>
@@ -16258,9 +16299,7 @@ Jishokun-Japanese English Dictionary &amp; Translator : 0
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
 <div class="jp-OutputArea-child">
-
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
@@ -16296,7 +16335,7 @@ Jishokun-Japanese English Dictionary &amp; Translator : 0
 </div>
 
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div id="cell-id=73f5496b" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -16309,7 +16348,7 @@ Jishokun-Japanese English Dictionary &amp; Translator : 0
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div id="cell-id=570da58f" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -16345,9 +16384,7 @@ Jishokun-Japanese English Dictionary &amp; Translator : 0
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
 <div class="jp-OutputArea-child">
-
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
@@ -16395,7 +16432,7 @@ MAPS_AND_NAVIGATION : 4056941.7741935486
 </div>
 
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div id="cell-id=27fdf2b4" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -16406,7 +16443,7 @@ MAPS_AND_NAVIGATION : 4056941.7741935486
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div id="cell-id=ebe199bd" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -16432,9 +16469,7 @@ MAPS_AND_NAVIGATION : 4056941.7741935486
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
 <div class="jp-OutputArea-child">
-
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
@@ -16476,7 +16511,7 @@ BBM - Free Calls &amp; Messages : 100,000,000+
 </div>
 
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div id="cell-id=a5605220" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -16487,12 +16522,12 @@ BBM - Free Calls &amp; Messages : 100,000,000+
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div id="cell-id=ccf893a6" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[30]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[29]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">under_100_m</span> <span class="o">=</span> <span class="p">[]</span>
@@ -16518,11 +16553,9 @@ BBM - Free Calls &amp; Messages : 100,000,000+
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[30]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[29]:</div>
 
 
 
@@ -16538,7 +16571,7 @@ BBM - Free Calls &amp; Messages : 100,000,000+
 </div>
 
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div id="cell-id=20cc1ac5" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -16553,12 +16586,12 @@ BBM - Free Calls &amp; Messages : 100,000,000+
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div id="cell-id=1a9925c1" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[31]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[30]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">app</span> <span class="ow">in</span> <span class="n">android_final</span><span class="p">:</span>
@@ -16577,9 +16610,7 @@ BBM - Free Calls &amp; Messages : 100,000,000+
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
 <div class="jp-OutputArea-child">
-
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
@@ -16784,7 +16815,7 @@ The SCP Foundation DB fr nn5n : 1,000+
 </div>
 
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div id="cell-id=6b9ec90d" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -16795,12 +16826,12 @@ The SCP Foundation DB fr nn5n : 1,000+
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div id="cell-id=9c86aac6" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[32]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[31]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">app</span> <span class="ow">in</span> <span class="n">android_final</span><span class="p">:</span>
@@ -16821,9 +16852,7 @@ The SCP Foundation DB fr nn5n : 1,000+
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
 <div class="jp-OutputArea-child">
-
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
@@ -16843,7 +16872,7 @@ Audiobooks from Audible : 100,000,000+
 </div>
 
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div id="cell-id=f2f3856d" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -16854,12 +16883,12 @@ Audiobooks from Audible : 100,000,000+
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div id="cell-id=65f27342" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[33]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[32]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">app</span> <span class="ow">in</span> <span class="n">android_final</span><span class="p">:</span>
@@ -16881,9 +16910,7 @@ Audiobooks from Audible : 100,000,000+
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
 <div class="jp-OutputArea-child">
-
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
@@ -16946,7 +16973,7 @@ English to Hindi Dictionary : 5,000,000+
 </div>
 
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div id="cell-id=e3d4f380" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
