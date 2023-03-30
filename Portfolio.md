@@ -42,6 +42,8 @@ layout: default
 
 ## Python
 
+[Indicators of Heavy Traffic on I-94](./Python/Heavy_Traffic/Indicators_of_Heavy_Traffic.html)
+
 [eBay Car Sales Data Exploration](./Python/eBay%20Car%20Sales/ebay%20Car%20Sales.html)
 
 [Hacker News](./Python/hacker%20news/hacker_news.html)
