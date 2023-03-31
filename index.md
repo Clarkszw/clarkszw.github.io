@@ -9,9 +9,7 @@ My Github username is: [clarkszw](https://github.com/Clarkszw)
 
 These projects are done along with my data science learning path. Writing in both R and Python.
 
-All the projects in R is exported as HTML, which can be accessed directly from the link.
-
-For Python, I used Jyputer, therefore these files need to be downloaded to view.
+## [![Spicy data](./img/giphy.gif)](./Portfolio.html)
 
 ### [Come in here.](./Portfolio.html)
 

@@ -12,6 +12,8 @@ layout: default
 
 [Storytelling Data Visualization on Exchange Rates](./Python/Exchange_Rates/Exchange_Rates.html)
 
+[Analyzing New York City School Data](./Python/NYCschools/NYCschools.html)
+
 [Clean and Analyze Employee Exit Surveys](./Python/Employee_Exit_Survey/Employee_Exit_Survey.html)
 
 [Indicators of Heavy Traffic on I-94](./Python/Heavy_Traffic/Indicators_of_Heavy_Traffic.html)
