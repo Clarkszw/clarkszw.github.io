@@ -12,6 +12,8 @@ layout: default
 
 [Storytelling Data Visualization on Exchange Rates](./Python/Exchange_Rates/Exchange_Rates.html)
 
+[Clean and Analyze Employee Exit Surveys](./Python/Employee_Exit_Survey/Employee_Exit_Survey.html)
+
 [Indicators of Heavy Traffic on I-94](./Python/Heavy_Traffic/Indicators_of_Heavy_Traffic.html)
 
 [eBay Car Sales Data Exploration](./Python/eBay%20Car%20Sales/ebay%20Car%20Sales.html)
