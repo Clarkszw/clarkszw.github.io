@@ -8,6 +8,20 @@ layout: default
 
 ---
 
+## Python
+
+[Storytelling Data Visualization on Exchange Rates](./Python/Exchange_Rates/Exchange_Rates.html)
+
+[Indicators of Heavy Traffic on I-94](./Python/Heavy_Traffic/Indicators_of_Heavy_Traffic.html)
+
+[eBay Car Sales Data Exploration](./Python/eBay%20Car%20Sales/ebay%20Car%20Sales.html)
+
+[Hacker News](./Python/hacker%20news/hacker_news.html)
+
+[Prison Break](./Python/Prison%20Break/PrisenBreak.html)
+
+[Profitable App Profiles](./Python/Profitable%20App%20Profiles/Profitable%20App%20Profiles.html)
+
 ## R
 
 [BestMarket](./R/BestMarket/BestMarket.html)
@@ -39,18 +53,6 @@ layout: default
 [Predicting Car Prices](./R/Predicting%20Car%20Prices/Predicting-Car-Prices.html)
 
 [Spam](./R/Spam/Spam.html)
-
-## Python
-
-[Indicators of Heavy Traffic on I-94](./Python/Heavy_Traffic/Indicators_of_Heavy_Traffic.html)
-
-[eBay Car Sales Data Exploration](./Python/eBay%20Car%20Sales/ebay%20Car%20Sales.html)
-
-[Hacker News](./Python/hacker%20news/hacker_news.html)
-
-[Prison Break](./Python/Prison%20Break/PrisenBreak.html)
-
-[Profitable App Profiles](./Python/Profitable%20App%20Profiles/Profitable%20App%20Profiles.html)
 
 ---
 
