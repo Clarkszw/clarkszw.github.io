@@ -16,7 +16,9 @@ layout: default
 
 [Star Wars Survey](./Python/Star_Wars_Survey/Star_Wars_Survey.html)
 
-[Analyzing CIA Factbook Data Using SQL](./Python/CIA_Factbook/CIA_Factbook.html)
+[Answering Business Questions Using **SQL**](./Python/Chinook/Chinook.html)
+
+[Analyzing CIA Factbook Data Using **SQL**](./Python/CIA_Factbook/CIA_Factbook.html)
 
 [Clean and Analyze Employee Exit Surveys](./Python/Employee_Exit_Survey/Employee_Exit_Survey.html)
 
