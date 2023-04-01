@@ -9,9 +9,9 @@ My Github username is: [clarkszw](https://github.com/Clarkszw)
 
 The projects I've completed in R and Python demonstrate my expertise in data cleaning, analysis, visualization, and machine learning, serving as a testament to my growth and competency in the dynamic field of data science. [Come in here.](./Portfolio.html)
 
-<div style="text-align:left">
+<div style="text-align:center">
   <a href="./Portfolio.html">
-    <img src="./img/giphy.gif" alt="Spicy Data" title="Spicy Data" width="400" height="320">
+    <img src="./img/giphy.gif" alt="Spicy Data" title="Spicy Data" width="400" height="330">
   </a>
 </div>
 
