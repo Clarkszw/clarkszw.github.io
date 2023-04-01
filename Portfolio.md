@@ -14,6 +14,8 @@ layout: default
 
 [Analyzing New York City School Data](./Python/NYCschools/NYCschools.html)
 
+[Star Wars Survey](./Python/Star_Wars_Survey/Star_Wars_Survey.html)
+
 [Clean and Analyze Employee Exit Surveys](./Python/Employee_Exit_Survey/Employee_Exit_Survey.html)
 
 [Indicators of Heavy Traffic on I-94](./Python/Heavy_Traffic/Indicators_of_Heavy_Traffic.html)

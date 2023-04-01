@@ -5,13 +5,15 @@ layout: default
 Hi, I am Zhiwen Shi, you can call me Clark.
 My Github username is: [clarkszw](https://github.com/Clarkszw)
 
-# [Project Portfolio for Data Analyst](./Portfolio.html)
+# [Project Portfolio for Data Scientist](./Portfolio.html)
 
-These projects are done along with my data science learning path. Writing in both R and Python.
+The projects I've completed in R and Python demonstrate my expertise in data cleaning, analysis, visualization, and machine learning, serving as a testament to my growth and competency in the dynamic field of data science. [Come in here.](./Portfolio.html)
 
-## [![Spicy data](./img/giphy.gif)](./Portfolio.html)
-
-### [Come in here.](./Portfolio.html)
+<div style="text-align:left">
+  <a href="./Portfolio.html">
+    <img src="./img/giphy.gif" alt="Spicy Data" title="Spicy Data" width="400" height="320">
+  </a>
+</div>
 
 ---
 
