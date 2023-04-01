@@ -31,7 +31,7 @@ A software library for scientific visualization in Python
 
 ![fury](https://raw.githubusercontent.com/fury-gl/fury-communication-assets/main/fury-logo.png){:width="200px" height="80px"}
 
-Open Source https://github.com/fury-gl/fury
+Open Source [https://github.com/fury-gl/fury](https://github.com/fury-gl/fury)
 
 ### **Scientific axes for FURY**
 
@@ -51,7 +51,7 @@ Deferred Structural Elucidation Analysis for Molecular Simulations.
 
 An organization centered around growing the molecular dynamics post processing toolkit called d-SEAMS
 
-Open Source https://github.com/d-SEAMS/seams-core
+Open Source [https://github.com/d-SEAMS/seams-core](https://github.com/d-SEAMS/seams-core)
 
 **Overview**
 

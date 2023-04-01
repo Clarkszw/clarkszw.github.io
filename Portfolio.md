@@ -12,6 +12,8 @@ layout: default
 
 [Storytelling Data Visualization on Exchange Rates](./Python/Exchange_Rates/Exchange_Rates.html)
 
+[Popular Data Science Questions](./Python/Popular_DS_Questions/Popular_DS_Questions.html)
+
 [Analyzing New York City School Data](./Python/NYCschools/NYCschools.html)
 
 [Star Wars Survey](./Python/Star_Wars_Survey/Star_Wars_Survey.html)
