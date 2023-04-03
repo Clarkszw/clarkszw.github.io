@@ -10,6 +10,12 @@ layout: default
 
 ## Python
 
+### Machine Learning
+
+[Building A Handwritten Digits Classifier](./Python/Handwritten_Digits_Classifier/Handritten_Digits_Classifier.html)
+
+### Public Data Sources
+
 [Storytelling Data Visualization on Exchange Rates](./Python/Exchange_Rates/Exchange_Rates.html)
 
 [Popular Data Science Questions](./Python/Popular_DS_Questions/Popular_DS_Questions.html)
