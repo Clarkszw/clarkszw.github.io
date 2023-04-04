@@ -20,6 +20,8 @@ layout: default
 
 [Popular Data Science Questions](./Python/Popular_DS_Questions/Popular_DS_Questions.html)
 
+[Is Fandango Still Inflating Ratings?](./Python/Fandango/Fandango.html)
+
 [Analyzing New York City School Data](./Python/NYCschools/NYCschools.html)
 
 [Star Wars Survey](./Python/Star_Wars_Survey/Star_Wars_Survey.html)
