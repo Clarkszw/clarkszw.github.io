@@ -16,6 +16,8 @@ layout: default
 
 ### Public Data Sources
 
+[Finding the Best Two Markets to Advertise In](./Python/Best_Markets/Best_Markets.html)
+
 [Storytelling Data Visualization on Exchange Rates](./Python/Exchange_Rates/Exchange_Rates.html)
 
 [Popular Data Science Questions](./Python/Popular_DS_Questions/Popular_DS_Questions.html)
