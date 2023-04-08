@@ -12,7 +12,9 @@ layout: default
 
 ### Machine Learning
 
-[Building A Handwritten Digits Classifier](./Python/Handwritten_Digits_Classifier/Handritten_Digits_Classifier.html)
+[Building a Spam Filter with Naive Bayes](./Python/Spam_Filter/Spam_Filter.html)
+
+[Building A Handwritten Digits Classifier **Deep Learning**](./Python/Handwritten_Digits_Classifier/Handritten_Digits_Classifier.html)
 
 ### Public Data Sources
 

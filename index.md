@@ -15,6 +15,8 @@ The projects I've completed in R and Python demonstrate my expertise in data cle
   </a>
 </div>
 
+---
+
 # [Data Infrastructure Design in AWS](https://github.com/Clarkszw/TrackMan-Data-Engineering-Challenge/blob/main/System-Design/README.md)
 
 > [The TrackMan Data Engineering System Design Challenge](http://designchallenge.trackmandata.com/) aims to gauge the familiarity with designing cloud based applications and solutions. This challenge is as much about the ability to communicate and justify the decisions as it is the specifics of the design itself.
@@ -26,6 +28,8 @@ Click the diagram to find [the design details](https://github.com/Clarkszw/Track
     <img src="https://github.com/Clarkszw/TrackMan-Data-Engineering-Challenge/blob/main/System-Design/data-lake-infrastructure.png?raw=true" alt="Spicy Data" title="data-infrastructure" width="400" height="295">
   </a>
 </div>
+
+---
 
 # [GSoC 2023](https://summerofcode.withgoogle.com/)
 
