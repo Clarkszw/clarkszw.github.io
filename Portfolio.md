@@ -16,6 +16,8 @@ layout: default
 
 [Building A Handwritten Digits Classifier **Deep Learning**](./Python/Handwritten_Digits_Classifier/Handritten_Digits_Classifier.html)
 
+[Jeopardy Questions](./Python/Jeopardy_Questions/Jeopard_Questions.html)
+
 ### Public Data Sources
 
 [Finding the Best Two Markets to Advertise In](./Python/Best_Markets/Best_Markets.html)
