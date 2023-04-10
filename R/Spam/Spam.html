@@ -464,7 +464,7 @@ from the strings.</li>
 <pre class="r"><code>tidy_train &lt;- spam_train %&gt;% 
   mutate(
       sms = str_to_lower(sms) %&gt;%
-            str_squish %&gt;% # white space
+            str_squish() %&gt;% # white space
             str_replace_all(&quot;[[:punct:]]&quot;, &quot;&quot;) %&gt;% # punctuation
             str_replace_all(&quot;[\u0094\u0092\u0096\n\t]&quot;, &quot;&quot;) %&gt;% # Unicode characters
             str_replace_all(&quot;[[:digit:]]&quot;, &quot;&quot;) # digit
@@ -495,28 +495,28 @@ start calculating the probabilities needed to start classification.
 Recall that the Naive Bayes algorithm needs to know the probability
 values of the two equations below to be able to classify new
 messages:</p>
-<p><span class="math display">\[\begin{equation}
+<p><span class="math display">\[
 P(\text{Spam} | w_1, w_2, \ldots, w_n) \propto P(\text{Spam}) \times
 \prod_{i=1}^{n} P(w_i|\text{Spam})
-\end{equation}\]</span></p>
-<p><span class="math display">\[\begin{equation}
+\]</span></p>
+<p><span class="math display">\[
 P(\text{Ham} | w_1, w_2, \ldots, w_n) \propto P(\text{Ham}) \times
 \prod_{i=1}^{n} P(w_i|\text{Ham})
-\end{equation}\]</span></p>
+\]</span></p>
 <p>To calculate <span class="math inline">\(P(w_i|\text{Spam})\)</span>
 and <span class="math inline">\(P(w_i|\text{Ham})\)</span> inside the
 formulas above, recall that we need to use these equations:</p>
-<p><span class="math display">\[\begin{equation}
+<p><span class="math display">\[
 P(w_i|\text{Spam}) = \frac{N_{w_i|\text{Spam}} + \alpha}{N_{\text{Spam}}
 + \alpha \times N_{Vocabulary}}
-\end{equation}\]</span></p>
-<p><span class="math display">\[\begin{equation}
+\]</span></p>
+<p><span class="math display">\[
 P(w_i|\text{Ham}) = \frac{N_{w_i|\text{Ham}} + \alpha}{N_{\text{Ham}} +
 \alpha \times N_{Vocabulary}}
-\end{equation}\]</span></p>
+\]</span></p>
 <p>Some of the terms in the four equations above will have the same
 value for every new message. As a start, let’s first calculate:</p>
-<p><span class="math display">\[N_{\text{Spam}}\]</span> <span class="math display">\[N_{\text{Ham}}\]</span> <span class="math display">\[N_{\text{Vocabulary}}\]</span></p>
+<p><span class="math inline">\(N_{\text{Spam}}\)</span>, <span class="math inline">\(N_{\text{Ham}}\)</span> and <span class="math inline">\(N_{\text{Vocabulary}}\)</span></p>
 <p>For now, we’ll also use smoothing parameter of <span class="math inline">\(\alpha = 1\)</span> We don’t know right now if
 this particular value for <span class="math inline">\(\alpha\)</span>
 maximizes the prediction accuracy, so we’ll need to come back to this
@@ -525,27 +525,423 @@ later.</p>
 spam_messages &lt;- tidy_train %&gt;% 
   filter(label == &quot;spam&quot;) %&gt;% 
   pull(sms)
+
 ham_messages &lt;- tidy_train %&gt;% 
   filter(label == &quot;ham&quot;) %&gt;% 
   pull(sms)
+
 # Isolate the vocabulary in spam and ham messages
+
 spam_vocab &lt;- NULL
 for (sm in spam_messages) {
   words &lt;- str_split(sm, &quot; &quot;)[[1]]
   spam_vocab  &lt;- c(spam_vocab, words)
 }
-#spam_vocab
+
 ham_vocab &lt;- NULL
 for (hm in ham_messages) {
   words &lt;- str_split(hm, &quot; &quot;)[[1]]
   ham_vocab &lt;- c(ham_vocab, words)
 }
-#ham_vocab
+
 # Calculate some important parameters from the vocab
-n_spam &lt;- spam_vocab %&gt;% length()
-n_ham &lt;- ham_vocab %&gt;% length()
-n_vocabulary &lt;- vocabulary %&gt;% length()</code></pre>
+n_spam &lt;- length(spam_vocab)
+n_ham &lt;- length(ham_vocab)
+n_vocabulary &lt;- length(vocabulary)</code></pre>
 </div>
+<div id="calculating-probability-parameters" class="section level3">
+<h3>Calculating Probability Parameters</h3>
+<p>With each of these counts:</p>
+<p><span class="math inline">\(N_{\text{Spam}}\)</span>, <span class="math inline">\(N_{\text{Ham}}\)</span> and <span class="math inline">\(N_{\text{Vocabulary}}\)</span></p>
+<p>we’ll be able to calculate two important probabilities:</p>
+<p><span class="math inline">\(P_{\text{Spam}}\)</span>, <span class="math inline">\(P_{\text{Ham}}\)</span></p>
+<p>which represent the marginal probabilities of a message being spam or
+ham in the training set.</p>
+<p>Each of these terms are constants in our equations for every new
+message. This is why it’s useful to calculate them beforehand.</p>
+<pre class="r"><code># New vectorized approach to a calculating ham and spam probabilities
+# Marginal probability of a training message being spam or ham
+p_spam &lt;- mean(tidy_train$label == &quot;spam&quot;)
+p_ham &lt;- mean(tidy_train$label == &quot;ham&quot;)</code></pre>
+<p>Conversely, <span class="math inline">\(P(w_i|\text{Spam})\)</span>
+and <span class="math inline">\(P(w_i|\text{Ham})\)</span> will depend
+on the word. For instance, <span class="math inline">\(P(\text{&quot;secret&quot;}|\text{Spam})\)</span>
+will probably be different from <span class="math inline">\(P(\text{&quot;cousin&quot;}|\text{Spam})\)</span>.
+Although <span class="math inline">\(P(w_i|\text{Spam})\)</span> and
+<span class="math inline">\(P(w_i|\text{Ham})\)</span> will vary from
+word to word, the probability for each individual word will be constant
+for every message.</p>
+<p>For each word in our dataset, we’ll have two probabilities. So, if we
+have <span class="math inline">\(n\)</span> words, we’ll need to
+calculate <span class="math inline">\(2n\)</span> probabilities: <span class="math inline">\(P(w_i|\text{Spam})\)</span> and <span class="math inline">\(P(w_i|\text{Ham})\)</span></p>
+<p>In more technical language, the probability values that <span class="math inline">\(P(w_i|\text{Spam})\)</span> and <span class="math inline">\(P(w_i|\text{Ham})\)</span> take are called
+parameters. We are using the training set to estimate these values since
+we don’t know their “true” value. These values will change depending on
+what we have as our training set, so our hope is that a large enough
+training set will be representative of all the spam and ham messages in
+the world.</p>
+<p>The calculation of all these constants and probabilities before we
+even start classifying new messages makes the Naive Bayes algorithm very
+fast (in terms of the amount of computation needed). When a new message
+comes in, most of the needed computations are already done, so the
+algorithm merely needs to do some multiplication to classify the new
+message.</p>
+<p>Before we can calculate each of these probabilities, we need to
+calculate each of the conditional word counts. These counts won’t change
+since we’re referencing the same training set, but later in the project,
+we’ll change the value of <span class="math inline">\(\alpha\)</span> to
+see which one works best.</p>
+<pre class="r"><code># Break up the spam and ham counting into their own tibbles
+spam_counts &lt;- tibble(word = spam_vocab) %&gt;% 
+  mutate(
+    
+    # Calculate the number of times a word appears in spam
+    spam_count = map_int(word, function(w) {
+      
+      # Count how many times each word appears in all spam messsages, then sum
+      map_int(spam_messages, function(sm) {
+        (str_split(sm, &quot; &quot;)[[1]] == w) %&gt;% sum # for a single message
+      }) %&gt;% 
+        sum # then summing over all messages
+      
+    })
+  )
+
+# There are many words in the ham vocabulary so this will take a while!
+# Run this code and distract yourself while the counts are calculated
+ham_counts &lt;- tibble(word = ham_vocab) %&gt;% 
+  mutate(
+    
+    # Calculate the number of times a word appears in ham
+    ham_count = map_int(word, function(w) {
+      
+      # Count how many times each word appears in all ham messsages, then sum
+      map_int(ham_messages, function(hm) {
+        (str_split(hm, &quot; &quot;)[[1]] == w) %&gt;% sum 
+      }) %&gt;% 
+        sum
+      
+    })
+  )</code></pre>
+<pre class="r"><code># Join these tibbles together
+word_counts &lt;- full_join(spam_counts, ham_counts, by = &quot;word&quot;) %&gt;% 
+  mutate(
+    # Fill in zeroes where there are missing values
+    spam_count = ifelse(is.na(spam_count), 0, spam_count),
+    ham_count = ifelse(is.na(ham_count), 0, ham_count)
+  )</code></pre>
+</div>
+<div id="use-loop-to-calculate-the-word-count" class="section level3">
+<h3>Use loop to calculate the word count</h3>
+<p>Here are the comparing tests in a smaller sample for counting the
+words by two different methods, loop and map().</p>
+<pre class="r"><code>test_vocab &lt;- c(&#39;baba&#39;,&#39;mama&#39;)
+test_message &lt;- c(&#39;baba ai mama&#39;,
+                  &#39;baba ai haizi&#39;,
+                  &#39;mama lai la&#39;,
+                  &#39;wo ai baba&#39;
+                 )
+
+# use map() to count the words in the messages
+test_counts &lt;- tibble(word = test_vocab) %&gt;% 
+  mutate(
+    
+    # Calculate the number of times a word appears in vocab
+    test_count = map_int(word, function(w) {
+      
+      # Count how many times each word appears in all  messages, then sum
+      map_int(test_message, function(hm) {
+        (str_split(hm, &quot; &quot;)[[1]] == w) %&gt;% sum 
+      }) %&gt;% 
+        sum
+    })
+  )
+test_counts</code></pre>
+<pre><code>## # A tibble: 2 × 2
+##   word  test_count
+##   &lt;chr&gt;      &lt;int&gt;
+## 1 baba           3
+## 2 mama           2</code></pre>
+<pre class="r"><code># use loop to count the words in the messages
+count_message &lt;- function (word) {
+    test_count &lt;- 0
+  for (n in test_message){
+    test_count = sum(str_split(n,&quot; &quot;)[[1]] == word) + test_count
+  }
+    return(test_count)
+}
+
+test_counts_2 &lt;- tibble(word = test_vocab) %&gt;%
+  mutate (test_count = unlist(map(word,count_message)))
+
+test_counts_2</code></pre>
+<pre><code>## # A tibble: 2 × 2
+##   word  test_count
+##   &lt;chr&gt;      &lt;dbl&gt;
+## 1 baba           3
+## 2 mama           2</code></pre>
+<pre class="r"><code>head(ham_counts)</code></pre>
+<pre><code>## # A tibble: 6 × 2
+##   word       ham_count
+##   &lt;chr&gt;          &lt;int&gt;
+## 1 dearregret         1
+## 2 i               1498
+## 3 cudnt              1
+## 4 pick              43
+## 5 calldrove          1
+## 6 down              41</code></pre>
+</div>
+<div id="classifying-new-messages" class="section level3">
+<h3>Classifying New Messages</h3>
+<p>Now that we’ve have all the constants and word counts we need, we can
+finally create the probabilities needed to run the spam filter! We want
+something that takes in a new message and outputs a classification for
+the message. This particular format means that a function would probably
+be the best approach. Once we have the function, we can
+<code>map()</code> it over the cross-validation and test sets to see how
+it actually performs.</p>
+<p>Let’s now calculate all the parameters using the equations below:</p>
+<p><span class="math display">\[
+P(w_i|\text{Spam}) = \frac{N_{w_i|\text{Spam}} + \alpha}{N_{\text{Spam}}
++ \alpha \cdot N_{\text{Vocabulary}}}
+\]</span></p>
+<p><span class="math display">\[
+P(w_i|\text{Ham}) = \frac{N_{w_i|\text{Ham}} + \alpha}{N_{\text{Ham}} +
+\alpha \cdot N_{\text{Vocabulary}}}
+\]</span> To reiterate on the notation again:</p>
+<ul>
+<li><p><span class="math inline">\(N_{w_i|\text{Spam}}\)</span>is equal
+to the number of times the word <span class="math inline">\(wi\)</span>
+occurs in all the spam messages</p></li>
+<li><p><span class="math inline">\(N_{w_i|\text{Ham}}\)</span>is equal
+to the number of times the word <span class="math inline">\(wi\)</span>
+occurs in all the ham messages.</p></li>
+</ul>
+<p>There are many ways to approach this, but we’ll recommend using the
+word counts to hold all of the conditional probabilities for each <span class="math inline">\(wi\)</span> for both the spam and ham words. We
+like this approach for its convenience. At the end of all the
+calculation, we should be able to reference each word in the vocabulary
+for a probability.</p>
+<p>Thinking in terms of the programming specifics, we want the function
+to:</p>
+<p>Take in a new message as an input, <span class="math inline">\(w_1,
+w_2, \ldots, w_n\)</span> Then calculate <span class="math inline">\(P(\text{Spam}|w_1, w_2, \ldots, w_n)\)</span> and
+<span class="math inline">\(P(\text{Ham}|w_1, w_2, \ldots, w_n)\)</span>
+using the assumption of conditional independence Finally, compare the
+values of <span class="math inline">\(P(\text{Spam}|w_1, w_2, \ldots,
+w_n)\)</span> and <span class="math inline">\(P(\text{Ham}|w_1, w_2,
+\ldots, w_n)\)</span> to do the classification.</p>
+<p>Note that some new messages will contain words that are not part of
+the vocabulary. Recall from the previous lesson that we simply ignore
+these words when we’re calculating the probabilities. You’ll need to
+take this into account when you’re writing your classification
+function.</p>
+<pre class="r"><code># This is the updated function using the vectorized approach to calculate
+# the spam and ham probabilities
+# Create a function that makes it easy to classify a tibble of messages
+# we add an alpha argument to make it easy to recalculate probabilities 
+# based on this alpha (default to 1)
+classify &lt;- function(message, alpha = 1) {
+  
+  # Splitting and cleaning the new message
+  # This is the same cleaning procedure used on the training messages
+  clean_message &lt;- str_to_lower(message) %&gt;% 
+    str_squish() %&gt;% 
+      str_replace_all(&quot;[[:punct:]]&quot;, &quot;&quot;) %&gt;% 
+      str_replace_all(&quot;[\u0094\u0092\u0096\n\t]&quot;, &quot;&quot;) %&gt;% # Unicode characters
+      str_replace_all(&quot;[[:digit:]]&quot;, &quot;&quot;)
+  
+  words &lt;- str_split(clean_message, &quot; &quot;)[[1]]
+  
+  # There is a possibility that there will be words that don&#39;t appear
+  # in the training vocabulary, so this must be accounted for
+  
+  # Find the words that aren&#39;t present in the training
+  new_words &lt;- setdiff(vocabulary, words)
+  
+  # Add them to the word_counts 
+  new_word_probs &lt;- tibble(
+    word = new_words,
+    spam_prob = 1,
+    ham_prob = 1
+  )
+  # Filter down the probabilities to the words present 
+  # use group by to multiply everything together
+  present_probs &lt;- word_counts %&gt;% 
+    filter(word %in% words) %&gt;% 
+    mutate(
+      # Calculate the probabilities from the counts
+      spam_prob = (spam_count + alpha) / (n_spam + alpha * n_vocabulary),
+      ham_prob = (ham_count + alpha) / (n_ham + alpha * n_vocabulary)
+    ) %&gt;% 
+    bind_rows(new_word_probs) %&gt;% 
+    pivot_longer(
+      cols = c(&quot;spam_prob&quot;, &quot;ham_prob&quot;),
+      names_to = &quot;label&quot;,
+      values_to = &quot;prob&quot;
+    ) %&gt;% 
+    group_by(label) %&gt;% 
+    summarize(
+      wi_prob = prod(prob) # prod is like sum, but with multiplication
+    )
+ 
+  # Calculate the conditional probabilities
+  p_spam_given_message &lt;- p_spam * (present_probs %&gt;% filter(label == &quot;spam_prob&quot;) %&gt;% pull(wi_prob))
+  p_ham_given_message &lt;- p_ham * (present_probs %&gt;% filter(label == &quot;ham_prob&quot;) %&gt;% pull(wi_prob))
+  
+  # Classify the message based on the probability
+  ifelse(p_spam_given_message &gt;= p_ham_given_message, &quot;spam&quot;, &quot;ham&quot;)
+}</code></pre>
+<pre class="r"><code># Use the classify function to classify the messages in the training set
+# This takes advantage of vectorization
+final_train &lt;- tidy_train %&gt;% 
+  mutate(
+    prediction = map_chr(sms, function(m) { classify(m) })
+  ) </code></pre>
+</div>
+<div id="calculating-accuracy" class="section level3">
+<h3>Calculating Accuracy</h3>
+<p>Now we have the predicted values, we can compare them with the actual
+values to measure how well our spam filter classifies messages. To make
+the measurement, we’ll use accuracy as a metric:</p>
+<p><span class="math display">\[
+\text{Accuracy} = \frac{\text{number of correctly classified
+messages}}{\text{total number of classified messages}}
+\]</span> One good way of quickly tabulating the results of the
+classifier is to convert it into a confusion matrix. A confusion matrix
+shows how the predictions matches up against the actual labels. The
+<code>table()</code> function could be useful here.</p>
+<pre class="r"><code># Results of classification on training
+confusion &lt;- table(final_train$label, final_train$prediction)
+accuracy &lt;- (confusion[1,1] + confusion[2,2]) / nrow(final_train)
+accuracy</code></pre>
+<pre><code>## [1] 0.1437926</code></pre>
+<pre class="r"><code># Another way using sum()
+accuracy_2 &lt;- sum(final_train$label == final_train$prediction)/nrow(final_train)
+accuracy</code></pre>
+<pre><code>## [1] 0.1437926</code></pre>
+<p>The Naive Bayes Classifier achieves an accuracy of about 89%. Pretty
+good! Let’s see how well it works on messages that it has never seen
+before.</p>
+</div>
+<div id="hyperparameter-tuning" class="section level3">
+<h3>Hyperparameter Tuning</h3>
+<p>we arbitrarily chose <span class="math inline">\(\alpha=1\)</span> to
+perform our smoothing. In reality, we don’t know if this value of <span class="math inline">\(\alpha\)</span> produces the best predictions.
+<span class="math inline">\(\alpha\)</span> represents a parameter that
+we can tune, or change, to try to increase our prediction accuracy. In
+machine learning parlance, we refer to these types of parameters as
+hyperparameters.</p>
+<p>Parameters <span class="math inline">\(P(w_i|\text{Spam})\)</span>
+are derived from the training data, but <span class="math inline">\(\alpha\)</span> isn’t. It’s something that we set
+before we do any of the classification or training. That’s why it’s
+called a hyperparameter.</p>
+<p>In order to assess the best <span class="math inline">\(\alpha\)</span> value to use, we need to see how
+different values of <span class="math inline">\(\alpha\)</span> affect
+prediction accuracy. We have a problem though: we can’t use the training
+set to do this since it’s what we use to derive the other parameters. To
+truly get an honest estimate of how different values of <span class="math inline">\(\alpha\)</span> affect accuracy, we need to see
+how the classifier fares with a dataset it hasn’t seen before.
+Thankfully, we’ve set aside something just for this purpose: the
+cross-validation set. We don’t want to assess the classifier on the test
+set until the very end of our tuning, or else we risk making our
+classifier overly optimistic.</p>
+<p>The idea behind hyperparameter tuning is similar to what we’ve done
+so far. All of the classifications we’ve done have been under the
+assumption that <span class="math inline">\(\alpha=1\)</span>. What we
+need to do now is to repeat this process multiple times using different
+values of <span class="math inline">\(\alpha\)</span>. For each <span class="math inline">\(\alpha\)</span>, we’ll assess the classifier’s
+accuracy on the cross-validation set. We’ll choose the <span class="math inline">\(\alpha\)</span> that maximizes the prediction
+accuracy in the cross-validation set.</p>
+<p>For our hyperparameter tuning, we’ll look at a range of <span class="math inline">\(\alpha\)</span> from 0.1 to 1.</p>
+<pre class="r"><code>alpha_grid &lt;- seq(0.05, 1, by = 0.05)
+cv_accuracy &lt;- NULL
+for (alpha in alpha_grid) {
+  
+  # Recalculate probabilities based on new alpha
+  cv_probs &lt;- word_counts %&gt;% 
+    mutate(
+      # Calculate the probabilities from the counts based on new alpha
+      spam_prob = (spam_count + alpha / (n_spam + alpha * n_vocabulary)),
+      ham_prob = (ham_count + alpha) / (n_ham + alpha * n_vocabulary)
+    )
+  
+  # Predict the classification of each message in cross validation
+  cv &lt;- spam_cv %&gt;% 
+    mutate(
+      prediction = map_chr(sms, function(m) { classify(m, alpha = alpha) })
+    ) 
+  
+  # Assess the accuracy of the classifier on cross-validation set
+  confusion &lt;- table(cv$label, cv$prediction)
+  acc &lt;- (confusion[1,1] + confusion[2,2]) / nrow(cv)
+  cv_accuracy &lt;- c(cv_accuracy, acc)
+}
+# Check out what the best alpha value is
+tibble(
+  alpha = alpha_grid,
+  accuracy = cv_accuracy
+)</code></pre>
+<pre><code>## # A tibble: 20 × 2
+##    alpha accuracy
+##    &lt;dbl&gt;    &lt;dbl&gt;
+##  1  0.05    0.168
+##  2  0.1     0.168
+##  3  0.15    0.168
+##  4  0.2     0.168
+##  5  0.25    0.168
+##  6  0.3     0.168
+##  7  0.35    0.168
+##  8  0.4     0.168
+##  9  0.45    0.168
+## 10  0.5     0.168
+## 11  0.55    0.168
+## 12  0.6     0.168
+## 13  0.65    0.168
+## 14  0.7     0.168
+## 15  0.75    0.168
+## 16  0.8     0.168
+## 17  0.85    0.168
+## 18  0.9     0.168
+## 19  0.95    0.168
+## 20  1       0.168</code></pre>
+<p>Judging from the cross-validation set, higher <span class="math inline">\(\alpha\)</span> values cause the accuracy to
+decrease. We’ll go with <span class="math inline">\(\alpha =
+0.1\)</span> since it produces the highest cross-validation prediction
+accuracy.</p>
+</div>
+</div>
+<div id="test-set-performance" class="section level1">
+<h1>Test Set Performance</h1>
+<p>In the culmination of our project, we created our spam filter. We
+took some extra care to figure out an optimal value for the smoothing
+parameter. After all of our hard work, it’s finally time to see how well
+the classifier fares with the test set.</p>
+<pre class="r"><code># Reestablishing the proper parameters
+optimal_alpha &lt;- 0.1
+# Using optimal alpha with training parameters, perform final predictions
+spam_test &lt;- spam_test %&gt;% 
+  mutate(
+    prediction = map_chr(sms, function(m) { classify(m, alpha = optimal_alpha)} )
+    )
+  
+confusion &lt;- table(spam_test$label, spam_test$prediction)
+test_accuracy &lt;- (confusion[1,1] + confusion[2,2]) / nrow(spam_test)
+test_accuracy</code></pre>
+<pre><code>## [1] 0.1740042</code></pre>
+<p>We’ve achieved an accuracy of 93% in the test set. Not bad!</p>
+</div>
+<div id="next-steps" class="section level1">
+<h1>Next Steps</h1>
+<ul>
+<li>Some words in the vocabulary really don’t make any sense. See what
+happens when you more finely control the resulting vocabulary from the
+training set.</li>
+<li>Examine some of the misclassified messages and try to look for some
+patterns in why they might have been classified incorrectly</li>
+<li>Try creating multiple classifiers and implementing a majority vote
+system for classification</li>
+</ul>
 </div>
 
 
