@@ -12,11 +12,11 @@ layout: default
 
 ### Machine Learning
 
+[Hypothesis Testing: Jeopardy Questions](./Python/Jeopardy_Questions/Jeopard_Questions.html)
+
 [Building a Spam Filter with Naive Bayes](./Python/Spam_Filter/Spam_Filter.html)
 
 [Building A Handwritten Digits Classifier **Deep Learning**](./Python/Handwritten_Digits_Classifier/Handritten_Digits_Classifier.html)
-
-[Jeopardy Questions](./Python/Jeopardy_Questions/Jeopard_Questions.html)
 
 ### Public Data Sources
 
