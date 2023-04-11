@@ -12,6 +12,8 @@ layout: default
 
 ### Machine Learning
 
+[K-Nearest Neighbors Classifier: Predicting Heart Disease](./Python/Heart_Disease/Heart_Disease.html)
+
 [Hypothesis Testing: Jeopardy Questions](./Python/Jeopardy_Questions/Jeopard_Questions.html)
 
 [Building a Spam Filter with Naive Bayes](./Python/Spam_Filter/Spam_Filter.html)
