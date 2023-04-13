@@ -12,6 +12,8 @@ layout: default
 
 ### Machine Learning
 
+[Linear Regression Modeling: Predicting Insurance Costs](./Python/Insurance_Costs/Insurance_Costs.html)
+
 [K-Mean Algorithm: Credit Card Customer Segmentation](./Python/Credit_Card_Customer/Credit_Card_Customer.html)
 
 [K-Nearest Neighbors Classifier: Predicting Heart Disease](./Python/Heart_Disease/Heart_Disease.html)
