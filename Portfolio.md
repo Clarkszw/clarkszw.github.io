@@ -12,6 +12,8 @@ layout: default
 
 ### Machine Learning
 
+[Stochastic Gradient Descent: Crowdedness in the Gym](./Python/Gradient_Descent/Gradient_Descent.html)
+
 [Linear Regression Modeling: Predicting Insurance Costs](./Python/Insurance_Costs/Insurance_Costs.html)
 
 [K-Mean Algorithm: Credit Card Customer Segmentation](./Python/Credit_Card_Customer/Credit_Card_Customer.html)
