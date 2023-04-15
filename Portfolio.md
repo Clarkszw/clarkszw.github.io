@@ -12,6 +12,8 @@ layout: default
 
 ### Machine Learning
 
+[Logistic Regression Modeling: Classifying Heart Disease](./Python/Heart_Disease/logistic_regression.html)
+
 [Stochastic Gradient Descent: Crowdedness in the Gym](./Python/Gradient_Descent/Gradient_Descent.html)
 
 [Linear Regression Modeling: Predicting Insurance Costs](./Python/Insurance_Costs/Insurance_Costs.html)
