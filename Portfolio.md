@@ -3,7 +3,7 @@ layout: default
 ---
 # Portfolio for Data Science
 
-[**Go back to Clark's code nest.**](./)
+[Go back to Clark's code nest.](./)
 
 ---
 
