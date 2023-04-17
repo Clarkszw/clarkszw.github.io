@@ -1,10 +1,9 @@
 ---
 layout: default
 ---
+# Portfolio for Data Science
 
-# Portfolio in Data Analysis
-
-### [Go back to Clark's code nest.](./)
+[**Go back to Clark's code nest.**](./)
 
 ---
 
@@ -12,7 +11,7 @@ layout: default
 
 ### Machine Learning
 
-[Optimizing Model Prediction: Predict Forest Fires(undergoing)](./Python/Forest_Fires/Forest_Fires.html)
+[Optimizing Model Prediction: Predict Forest Fires](./Python/Forest_Fires/Forest_Fires.html)
 
 [Tree Models: Predicting Employee Productivity](./Python/Employ_Productivity/Employ_Productivity.html)
 
