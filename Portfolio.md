@@ -12,13 +12,13 @@ layout: default
 
 ### Machine Learning
 
+[Optimizing Model Prediction: Predict Forest Fires(undergoing)](./Python/Forest_Fires/Forest_Fires.html)
+
 [Tree Models: Predicting Employee Productivity](./Python/Employ_Productivity/Employ_Productivity.html)
 
 [Logistic Regression Modeling: Classifying Heart Disease](./Python/Heart_Disease/logistic_regression.html)
 
 [Stochastic Gradient Descent: Crowdedness in the Gym](./Python/Gradient_Descent/Gradient_Descent.html)
-
-[Optimizing Model Prediction: Predict Forest Fires(undergoing)](./Python/Forest_Fires/Forest_Fires.html)
 
 [Linear Regression Modeling: Predicting Insurance Costs](./Python/Insurance_Costs/Insurance_Costs.html)
 
