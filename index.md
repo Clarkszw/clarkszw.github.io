@@ -39,9 +39,9 @@ Here are the projects I am currently contributing:
 
 ## [FURY](https://fury.gl)
 
-Free Unified Rendering in Python
+Free Unified Rendering in Python.
 
-A software library for scientific visualization in Python
+A software library for scientific visualization in Python.
 
 ![fury](https://raw.githubusercontent.com/fury-gl/fury-communication-assets/main/fury-logo.png){:width="200px" height="80px"}
 
