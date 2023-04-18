@@ -11,6 +11,8 @@ layout: default
 
 ### Machine Learning
 
+[Building A Handwritten Digits Classifier **Deep Learning**](./Python/Handwritten_Digits_Classifier/Handritten_Digits_Classifier.html)
+
 [Optimizing Model Prediction: Predict Forest Fires](./Python/Forest_Fires/Forest_Fires.html)
 
 [Tree Models: Predicting Employee Productivity](./Python/Employ_Productivity/Employ_Productivity.html)
@@ -28,8 +30,6 @@ layout: default
 [Hypothesis Testing: Jeopardy Questions](./Python/Jeopardy_Questions/Jeopard_Questions.html)
 
 [Building a Spam Filter with Naive Bayes](./Python/Spam_Filter/Spam_Filter.html)
-
-[Building A Handwritten Digits Classifier **Deep Learning**](./Python/Handwritten_Digits_Classifier/Handritten_Digits_Classifier.html)
 
 ### Public Data Sources
 
