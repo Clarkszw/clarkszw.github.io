@@ -1,11 +1,9 @@
 ---
-layout: single
-classes: wide
----
-# Portfolio for Data Science
-
-[Go back to Clark's code nest.](./)
-
+title: Portfolio for Data Science
+layout: collection
+permalink: /portfolio/
+collection: portfolio
+entries_layout: grid
 ---
 
 ## Python
@@ -98,4 +96,4 @@ classes: wide
 
 ---
 
-[Back to Home](./)
+[Back to Home](./index)
