@@ -13,7 +13,7 @@ header:
 
 # [Portfolio for Data Science](./portfolio)
 
-[![data](/assets/images/data_science/index.jpg)](/portfolio/)
+[![data](/assets/images/data_science/index.jpg)](/portfolio/){:width="350px" height="350px"}
 
 **30+ projects** I've completed in R and Python demonstrate my expertise in data cleaning, analysis, visualization, and machine learning, serving as a testament to my growth and competency in the dynamic field of data science.
 [**Learn more**](/portfolio/)
