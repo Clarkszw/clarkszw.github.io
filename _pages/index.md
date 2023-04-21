@@ -8,20 +8,16 @@ toc_label: "Projects"
 toc_icon: "fas fa-code-branch"
 toc_sticky: True
 header:
-  image: /assets/images/profile.jpg
-feature_row:
-  - image_path: /assets/images/data_science/index.jpg
-    alt: "portfolio"
-    title: "30+ projects in Data Science"
-    excerpt: "The projects I've completed in R and Python demonstrate my expertise in data cleaning, analysis, visualization, and machine learning, serving as a testament to my growth and competency in the dynamic field of data science."
-    url: "/portfolio/"
-    btn_class: "btn--primary"
-    btn_label: "Learn more"
+  image: /assets/images/header.jpg
 ---
 
 # [Portfolio for Data Science](./portfolio)
 
-{% include feature_row %}
+[![data](/assets/images/data_science/index.jpg)](/portfolio/)
+
+**30+ projects** I've completed in R and Python demonstrate my expertise in data cleaning, analysis, visualization, and machine learning, serving as a testament to my growth and competency in the dynamic field of data science.
+[**Learn more**](/portfolio/)
+
 
 ---
 
