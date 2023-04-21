@@ -3,7 +3,7 @@ layout: single
 permalink: /
 author_profile: true
 toc: true
-toc_title: "Home"
+toc_label: "Home"
 toc_sticky: true
 header:
   image: /assets/images/Header.jpg
@@ -30,7 +30,7 @@ Click the diagram to find [the design details](https://github.com/Clarkszw/Track
 
 <div style="text-align:center">
   <a href="https://github.com/Clarkszw/TrackMan-Data-Engineering-Challenge/blob/main/System-Design/README.md">
-    <img src="https://github.com/Clarkszw/TrackMan-Data-Engineering-Challenge/blob/main/System-Design/data-lake-infrastructure.png?raw=true" alt="Spicy Data" title="data-infrastructure" width="600" height="443">
+    <img src="https://github.com/Clarkszw/TrackMan-Data-Engineering-Challenge/blob/main/System-Design/data-lake-infrastructure.png?raw=true" alt="data-infrastructure" title="data-infrastructure" width="540" height="399">
   </a>
 </div>
 

@@ -12,7 +12,12 @@ classes: wide
 ### Machine Learning
 
 {% for portfolio in site.portfolio %}
-  <h2>{{ portfolio.method }} - {{ portfolio.skill }}</h2>
+  <h2>
+    <a href="{{ portfolio.url }}">
+      {{ portfolio.method }} - {{ portfolio.skill }}
+    </a>
+    {{ portfolio.method }} - {{ portfolio.skill }}
+  </h2>
   <p>{{ portfolio.content | markdownify }}</p>
 {% endfor %}
 
