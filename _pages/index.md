@@ -1,23 +1,31 @@
 ---
-layout: single
+layout: splash
 permalink: /
 author_profile: true
-title: 'Portfolio for Data Science'
+title: ''
 toc: true
 toc_label: "Projects"
 toc_icon: "fas fa-code-branch"
 toc_sticky: True
 header:
-  image: /assets/images/header.jpg
+  overlay_color: "#5e616c"
+  overlay_image: /assets/images/header.jpg
+excerpt: >
+  A portfolio in data science using public resources.<br />
+  <small><a href="/portfolio/">Learn more</a></small>
+portfolio_window:
+  - image_path: /assets/images/data_science/index.jpg
+    alt: "portfolio"
+    title: "30+ projects in Data Science"
+    excerpt: "The projects I've completed in R and Python demonstrate my expertise in data cleaning, analysis, visualization, and machine learning, serving as a testament to my growth and competency in the dynamic field of data science."
+    url: "/portfolio/"
+    btn_class: "btn--primary"
+    btn_label: "Learn more"
 ---
 
-The projects I've completed in R and Python demonstrate my expertise in data cleaning, analysis, visualization, and machine learning, serving as a testament to my growth and competency in the dynamic field of data science. [Come in here.](./portfolio)
+# [Portfolio for Data Science](./portfolio)
 
-<div style="text-align:center">
-  <a href="./portfolio">
-    <img src="./img/giphy.gif" alt="Spicy Data" title="Spicy Data" width="400" height="340">
-  </a>
-</div>
+{% include portfolio_window %}
 
 ---
 

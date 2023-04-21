@@ -16,7 +16,8 @@ minimal_mistakes_skin: "default" # "air", "aqua", "contrast", "dark", "dirt", "n
 
 # Site Settings
 locale: "en-US"
-title: "Bringing my passion to life, one pixel at a time."
+title: "Clark Zhiwen Shi"
+subtitle: "Bringing my passion to life, one pixel at a time."
 title_separator: "-"
 subtitle: # site tagline that appears below site title in masthead
 name: "Zhiwen Shi(Clark)"
