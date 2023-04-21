@@ -4,12 +4,8 @@ author_profile: true
 toc: true
 toc_sticky: true
 header:
-  overlay_image: /assets/images/unsplash-image-1.jpg
-  caption: "Photo credit: [**Unsplash**](https://unsplash.com)"
+  image: /assets/images/Header.jpg
 ---
-
-Hi, I am Zhiwen Shi, you can call me Clark.
-My Github username is: [clarkszw](https://github.com/Clarkszw)
 
 # [Project Portfolio for Data Science](./Portfolio)
 
@@ -31,7 +27,7 @@ Click the diagram to find [the design details](https://github.com/Clarkszw/Track
 
 <div style="text-align:center">
   <a href="https://github.com/Clarkszw/TrackMan-Data-Engineering-Challenge/blob/main/System-Design/README.md">
-    <img src="https://github.com/Clarkszw/TrackMan-Data-Engineering-Challenge/blob/main/System-Design/data-lake-infrastructure.png?raw=true" alt="Spicy Data" title="data-infrastructure" width="400" height="295">
+    <img src="https://github.com/Clarkszw/TrackMan-Data-Engineering-Challenge/blob/main/System-Design/data-lake-infrastructure.png?raw=true" alt="Spicy Data" title="data-infrastructure" width="600" height="443">
   </a>
 </div>
 
