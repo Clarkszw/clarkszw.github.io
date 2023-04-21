@@ -13,7 +13,7 @@ header:
 excerpt: >
   A portfolio in data science using public resources.<br />
   <small><a href="/portfolio/">Learn more</a></small>
-portfolio_window:
+feature_row:
   - image_path: /assets/images/data_science/index.jpg
     alt: "portfolio"
     title: "30+ projects in Data Science"
@@ -25,7 +25,7 @@ portfolio_window:
 
 # [Portfolio for Data Science](./portfolio)
 
-{% include portfolio_window %}
+{% include feature_row %}
 
 ---
 
