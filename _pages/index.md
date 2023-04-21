@@ -2,15 +2,14 @@
 layout: single
 permalink: /
 author_profile: true
-title: ''
+title: 'Portfolio for Data Science'
 toc: true
 toc_label: "Projects"
 toc_icon: "fas fa-code-branch"
+toc_sticky: True
 header:
   image: /assets/images/header.jpg
 ---
-
-# [Project Portfolio for Data Science](./portfolio)
 
 The projects I've completed in R and Python demonstrate my expertise in data cleaning, analysis, visualization, and machine learning, serving as a testament to my growth and competency in the dynamic field of data science. [Come in here.](./portfolio)
 

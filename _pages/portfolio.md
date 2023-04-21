@@ -12,16 +12,6 @@ classes: wide
 
 ### Machine Learning
 
-{% for portfolio in site.portfolio %}
-  <h2>
-    <a href="../Python/Handwritten_Digits_Classifier/Handritten_Digits_Classifier.html">
-      {{ portfolio.method }} - {{ portfolio.skill }}
-    </a>
-    {{ portfolio.method }} - {{ portfolio.skill }}
-  </h2>
-  <p>{{ portfolio.content | markdownify }}</p>
-{% endfor %}
-
 [Building A Handwritten Digits Classifier **Deep Learning**](/Python/Handwritten_Digits_Classifier/Handritten_Digits_Classifier.html)
 
 [Optimizing Model Prediction: Predict Forest Fires](/Python/Forest_Fires/Forest_Fires.html)
