@@ -1,14 +1,20 @@
 ---
-title: Portfolio for Data Science
+title: Portfolio
 layout: collection
 permalink: /portfolio/
 collection: portfolio
 entries_layout: grid
+classes: wide
 ---
 
 ## Python
 
 ### Machine Learning
+
+{% for portfolio in site.portfolio %}
+  <h2>{{ portfolio.method }} - {{ portfolio.skill }}</h2>
+  <p>{{ portfolio.content | markdownify }}</p>
+{% endfor %}
 
 [Building A Handwritten Digits Classifier **Deep Learning**](./Python/Handwritten_Digits_Classifier/Handritten_Digits_Classifier.html)
 

@@ -3,9 +3,11 @@ layout: single
 permalink: /
 author_profile: true
 toc: true
+toc_title: "Home"
 toc_sticky: true
 header:
   image: /assets/images/Header.jpg
+title: ''
 ---
 
 # [Project Portfolio for Data Science](./portfolio)
