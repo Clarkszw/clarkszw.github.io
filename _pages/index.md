@@ -8,7 +8,7 @@ toc_label: "Projects"
 toc_icon: "fas fa-code-branch"
 toc_sticky: True
 header:
-  image: /assets/images/header.jpg
+  image: /assets/images/index.jpg
 ---
 
 # [Portfolio for Data Science](./portfolio)
