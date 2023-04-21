@@ -4,18 +4,18 @@ author_profile: true
 toc: true
 toc_sticky: true
 header:
-  image: /assets/images/Header.jpg
+  image: ./assets/images/Header.jpg
 ---
 
 Hi, I am Zhiwen Shi, you can call me Clark.
 My Github username is: [clarkszw](https://github.com/Clarkszw)
 
-# [Project Portfolio for Data Science](./Portfolio.md)
+# [Project Portfolio for Data Science](./Portfolio)
 
-The projects I've completed in R and Python demonstrate my expertise in data cleaning, analysis, visualization, and machine learning, serving as a testament to my growth and competency in the dynamic field of data science. [Come in here.](./Portfolio.md)
+The projects I've completed in R and Python demonstrate my expertise in data cleaning, analysis, visualization, and machine learning, serving as a testament to my growth and competency in the dynamic field of data science. [Come in here.](./Portfolio)
 
 <div style="text-align:center">
-  <a href="./Portfolio.md">
+  <a href="./Portfolio">
     <img src="./img/giphy.gif" alt="Spicy Data" title="Spicy Data" width="400" height="340">
   </a>
 </div>
