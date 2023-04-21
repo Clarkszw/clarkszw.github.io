@@ -1,6 +1,8 @@
 ---
 layout: home
 author_profile: true
+toc: true
+toc_sticky: true
 ---
 
 Hi, I am Zhiwen Shi, you can call me Clark.

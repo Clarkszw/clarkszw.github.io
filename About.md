@@ -1,3 +1,7 @@
+---
+layout: single
+---
+
 # About Me
 
 Hi there, my name is Clark, and I'm thrilled to welcome you to my website! I'm a cloud solution architect and data engineer, with a passion for quantum chemistry, cooking, playing basketball, and drumming.
