@@ -6,7 +6,7 @@ toc: true
 toc_label: "Home"
 toc_sticky: true
 header:
-  image: /assets/images/Header.jpg
+  image: /assets/images/header.jpg
 title: ''
 ---
 

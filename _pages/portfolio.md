@@ -13,7 +13,7 @@ classes: wide
 
 {% for portfolio in site.portfolio %}
   <h2>
-    <a href="{{ portfolio.url }}">
+    <a href="./Python/Handwritten_Digits_Classifier/Handritten_Digits_Classifier.html">
       {{ portfolio.method }} - {{ portfolio.skill }}
     </a>
     {{ portfolio.method }} - {{ portfolio.skill }}
