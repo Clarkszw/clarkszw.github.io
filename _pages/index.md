@@ -1,5 +1,6 @@
 ---
-layout: home
+layout: single
+permalink: /
 author_profile: true
 toc: true
 toc_sticky: true
@@ -7,9 +8,9 @@ header:
   image: /assets/images/Header.jpg
 ---
 
-# [Project Portfolio for Data Science](./Portfolio)
+# [Project Portfolio for Data Science](./portfolio)
 
-The projects I've completed in R and Python demonstrate my expertise in data cleaning, analysis, visualization, and machine learning, serving as a testament to my growth and competency in the dynamic field of data science. [Come in here.](./Portfolio)
+The projects I've completed in R and Python demonstrate my expertise in data cleaning, analysis, visualization, and machine learning, serving as a testament to my growth and competency in the dynamic field of data science. [Come in here.](./portfolio)
 
 <div style="text-align:center">
   <a href="./portfolio">
