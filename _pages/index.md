@@ -1,5 +1,5 @@
 ---
-layout: splash
+layout: single
 permalink: /
 author_profile: true
 title: ''
@@ -8,11 +8,7 @@ toc_label: "Projects"
 toc_icon: "fas fa-code-branch"
 toc_sticky: True
 header:
-  overlay_color: "#5e616c"
-  overlay_image: /assets/images/header.jpg
-excerpt: >
-  A portfolio in data science using public resources.<br />
-  <small><a href="/portfolio/">Learn more</a></small>
+  image: /assets/images/profile.jpg
 feature_row:
   - image_path: /assets/images/data_science/index.jpg
     alt: "portfolio"

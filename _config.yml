@@ -17,9 +17,8 @@ minimal_mistakes_skin: "default" # "air", "aqua", "contrast", "dark", "dirt", "n
 # Site Settings
 locale: "en-US"
 title: "Clark Zhiwen Shi"
-subtitle: "Bringing my passion to life, one pixel at a time."
 title_separator: "-"
-subtitle: # site tagline that appears below site title in masthead
+subtitle: "Bringing my passion to life, one pixel at a time."
 name: "Zhiwen Shi(Clark)"
 description: "A place about Shi Zhiwen and his work."
 url: "https://clarkszw.github.io"
@@ -289,4 +288,3 @@ defaults:
       comments: # true
       share: true
       related: true
-
