@@ -96,4 +96,4 @@ entries_layout: grid
 
 ---
 
-[Back to Home](./index)
+[Back to Home](/index/)

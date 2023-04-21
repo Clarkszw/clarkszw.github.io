@@ -4,6 +4,8 @@ permalink: /index/
 author_profile: true
 toc: true
 toc_sticky: true
+header:
+  image: /assets/images/Header.jpg
 ---
 
 Hi, I am Zhiwen Shi, you can call me Clark.
