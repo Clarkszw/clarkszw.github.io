@@ -2,11 +2,7 @@
 title: "Building A Handwritten Digits Classifier"
 method: "Machine learning"
 skill: "Deep Learning"
-excerpt: "In this Project, we'll:
-* explore why image classification is a hard task
-* observe the limitations of traditional machine learning models for image classification
-* train, test, and improve a few different deep neural networks for image classification
-"
+excerpt: "In this Project, we'll: 1. explore why image classification is a hard task. 2. observe the limitations of traditional machine learning models for image classification. 3. train, test, and improve a few different deep neural networks for image classification"
 header:
   image: https://s3.amazonaws.com/dq-content/244/single_image.svg
   teaser: https://s3.amazonaws.com/dq-content/244/single_image.svg
