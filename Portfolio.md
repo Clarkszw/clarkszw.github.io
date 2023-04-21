@@ -1,5 +1,6 @@
 ---
 layout: single
+classes: wide
 ---
 # Portfolio for Data Science
 

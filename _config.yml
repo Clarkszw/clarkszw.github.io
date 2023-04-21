@@ -16,12 +16,12 @@ minimal_mistakes_skin: "default" # "air", "aqua", "contrast", "dark", "dirt", "n
 
 # Site Settings
 locale: "en-US"
-title: "Clark's Whiteboard"
+title: "Clark is always good!"
 title_separator: "-"
 subtitle: # site tagline that appears below site title in masthead
 name: "Zhiwen Shi(Clark)"
 description: "A place about Shi Zhiwen and his work."
-url: "https://mmistakes.github.io"
+url: "https://clarkszw.github.io"
 baseurl: # the subpath of your site, e.g. "/blog"
 repository: "Clarkszw/clarkszw.github.io"
 teaser: # path of fallback teaser image, e.g. "/assets/images/500x300.png"
