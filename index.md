@@ -1,5 +1,6 @@
 ---
-layout: default
+layout: home
+author_profile: true
 ---
 
 Hi, I am Zhiwen Shi, you can call me Clark.
