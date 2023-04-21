@@ -1,10 +1,10 @@
 main:
   - title: "Home"
-    url: ./index
+    url: /index/
   - title: "Portfolio"
-    url: ./Portfolio
+    url: /Portfolio/
   - title: "About"
-    url: ./About
+    url: /About/
   # - title: "Tags"
   #   url: /tags/
   # - title: "Pages"
