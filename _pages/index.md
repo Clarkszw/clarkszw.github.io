@@ -2,12 +2,12 @@
 layout: single
 permalink: /
 author_profile: true
+title: ''
 toc: true
-toc_label: "Home"
-toc_sticky: true
+toc_label: "Projects"
+toc_icon: "fas fa-code-branch"
 header:
   image: /assets/images/header.jpg
-title: ''
 ---
 
 # [Project Portfolio for Data Science](./portfolio)
