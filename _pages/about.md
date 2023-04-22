@@ -2,13 +2,9 @@
 title: "About Me"
 layout: splash
 permalink: /about/
+header:
+  image: /assets/images/about.jpg
 ---
-
-<div style="text-align:center">
-  <a href="/">
-    <img src="../assets/images/about.jpg" alt="about-me" title="about-me">
-  </a>
-</div>
 
 Hi there, my name is Clark, and I'm thrilled to welcome you to my website! I'm a cloud solution architect and data engineer, with a passion for quantum chemistry, cooking, playing basketball, and drumming.
 
