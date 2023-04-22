@@ -9,10 +9,10 @@ toc_icon: "fas fa-code-branch"
 toc_sticky: True
 header:
   overlay_color: "#5e616c"
-  overlay_image: /assets/images/index.jpg
+  image: /assets/images/index.jpg
   actions:
     - label: "Learn more"
-      url: "/portfolio/"
+      url: "https://clarkszw.github.io/#portfolio-for-data-science"
 excerpt: >
   Connecting the dots of data can reveal the truth behind the illusions of reality.
 ---
