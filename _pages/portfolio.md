@@ -10,28 +10,29 @@ classes: wide
 feature_row_ml1:
   - image_path: https://s3.amazonaws.com/dq-content/244/nn_learns_hierarchy.png
     alt: "Digits Classifier"
-    title: "Handwritten Digits Classifier"
+    title: "<a href='https://clarkszw.github.io/Python/Handwritten_Digits_Classifier/Handritten_Digits_Classifier.html'>Handwritten Digits Classifier</a>"
     excerpt: "Explore image classification; observe the limitations of traditional machine learning models; train, test, and improve a few different deep neural networks"
-    url: https://clarkszw.github.io/Python/Handwritten_Digits_Classifier/Handritten_Digits_Classifier.htmlk
+    url: https://clarkszw.github.io/Python/Handwritten_Digits_Classifier/Handritten_Digits_Classifier.html
     btn_label: "Machine Learning - Deep Learning - Optmization"
     btn_class: "btn--primary"
   - image_path: /assets/images/data_science/forest_fire.jpg
     alt: "Predict Forest Fires"
-    title: "[Predict Forest Fires](https://clarkszw.github.io/Python/Forest_Fires/Forest_Fires.html)"
+    title: "<a href='https://clarkszw.github.io/Python/Forest_Fires/Forest_Fires.html'>Predict Forest Fires</a>"
     excerpt: "Applying a standard linear regression model to predict the extent of fire damage to a forest. Our data comes from the Forest Fires dataset from the UCI Machine Learning Repository."
     url: "https://clarkszw.github.io/Python/Forest_Fires/Forest_Fires.html"
     btn_label: "Machine Learning - Linear Regression - Model Selection"
     btn_class: "btn--primary"
   - image_path: https://s3.amazonaws.com/dq-content/755/garment-factory-unsplash.jpg
     alt: "Predicting Employee Productivity"
-    title: "[Predicting Employee Productivity](https://clarkszw.github.io/Python/Employ_Productivity/Employ_Productivity.html)"
+    title: "Predicting Employee Productivity"
     excerpt: "Work with a classification tree for the dataset Productivity Prediction of Garment Employees."
     url: "https://clarkszw.github.io/Python/Employ_Productivity/Employ_Productivity.html"
-    btn_label: "Machine Learning - Desicion Trees - Model Selection"
+    btn_label: "Machine Learning - Desicion Trees - Tree Comparison"
     btn_class: "btn--primary"
+
 ---
 
-Welcome to my data science portfolio page where showcases a collection of my projects on Python and R programming, machine learning algorithms, data analysis, and visualization. In this portfolio, I have worked on various datasets ranging from predicting forest fires and heart disease, to building a spam filter and analyzing New York City school data. The goal is to share my passion for data science and how it can be used to solve real-world problems. Each project demonstrates a different aspect of data science and I hope they inspire you to explore the endless possibilities of this field.
+<small>Welcome to my data science portfolio page where showcases a collection of my projects on Python and R programming, machine learning algorithms, data analysis, and visualization. In this portfolio, I have worked on various datasets ranging from predicting forest fires and heart disease, to building a spam filter and analyzing New York City school data. The goal is to share my passion for data science and how it can be used to solve real-world problems. Each project demonstrates a different aspect of data science and I hope they inspire you to explore the endless possibilities of this field.</small>
 
 {% include feature_row id="feature_row_ml1" %}
 
