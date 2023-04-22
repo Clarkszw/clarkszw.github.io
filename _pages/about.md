@@ -6,7 +6,7 @@ permalink: /about/
 
 <div style="text-align:center">
   <a href="/">
-    <img src="/assets/images/about.jpg" alt="about-me" title="about-me">
+    <img src="../assets/images/about.jpg" alt="about-me" title="about-me">
   </a>
 </div>
 
