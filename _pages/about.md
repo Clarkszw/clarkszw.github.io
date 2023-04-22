@@ -6,7 +6,7 @@ permalink: /about/
 
 <div style="display:flex; flex-direction:row;">
   <div style="flex:1;">
-    ![about me](/assets/images/about.png)
+    <img src="/assets/images/about.png" style="float:left; margin-right:20px;">
   </div>
   <div style="flex:1; padding-left:20px;">
     <h2>Hi there, my name is Clark!</h2>
