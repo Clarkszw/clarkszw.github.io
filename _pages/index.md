@@ -15,7 +15,7 @@ header:
 
 <div style="text-align:center">
   <a href="/portfolio/">
-    <img src="/assets/images/data_science/home.jpg" alt="data-analysis" title="data-analysis" width="400" height="400">
+    <img src="/assets/images/data_science/home.jpg" alt="data-analysis" title="data-analysis" width="450" height="450">
   </a>
 </div>
 
