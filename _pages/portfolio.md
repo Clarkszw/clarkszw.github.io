@@ -34,7 +34,7 @@ feature_row_ml2:
   - image_path: /assets/images/data_science/heart_disease.png
     alt: "Classifying Heart Disease"
     title: "<a href='https://clarkszw.github.io/Python/Heart_Disease/logistic_regression.html'>Classifying Heart Disease</a>"
-    excerpt: "Applying logistic regression model at a real-life dataset: the Heart Disease Data Set from the UCI Machine Learning Repository to predict heart disease."
+    excerpt: "Applying logistic regression model at a real-life dataset: the Heart Disease Data Set from the UCI Machine Learning Repository to predict heart disease, showing how machine learning can help solve problems that have a real impact on people's lives."
     url: https://clarkszw.github.io/Python/Heart_Disease/logistic_regression.html
     btn_label: "Machine Learning - Logistic Regression - Exploration"
     btn_class: "btn--primary"
@@ -62,9 +62,9 @@ feature_row_ml3:
     btn_label: "Machine Learning - Clustering - K-Mean Algorithm"
     btn_class: "btn--info"
   - image_path: /assets/images/data_science/heart.png
-    alt: "Predicting Heart Diseasem"
+    alt: "Predicting Heart Disease"
     title: "<a href='https://clarkszw.github.io/Python/Heart_Disease/Heart_Disease.html'>Predicting Heart Disease</a>"
-    excerpt: "Build a K-Nearest Neighbors classifier to accurately predict the likelihood of a patient having a heart disease in the future."
+    excerpt: "Build a K-Nearest Neighbors classifier to accurately predict the likelihood of a patient having a heart disease in the future. It is imperative to identify these risk factors early on to prevent the onset of CVDs and reduce premature deaths"
     url: "https://clarkszw.github.io/Python/Heart_Disease/Heart_Disease.html"
     btn_label: "Machine Learning - Classifier - K-Nearest Neighbors"
     btn_class: "btn--outline"
@@ -76,6 +76,35 @@ feature_row_ml3:
     btn_label: "Machine Learning - Hypothesis Testing - Data Cleaning"
     btn_class: "btn--light"
 
+feature_row_ml4:
+  - image_path: /assets/images/data_science/spam.png
+    alt: "Spam Filter"
+    title: "<a href='https://clarkszw.github.io/Python/Spam_Filter/Spam_Filter.html'>Spam Filter</a>"
+    excerpt: "Build a spam filter for SMS messages using the multinomial Naive Bayes algorithm. Our goal is to write a program that classifies new messages with an accuracy greater than 80%"
+    url: https://clarkszw.github.io/Python/Spam_Filter/Spam_Filter.html
+    btn_label: "Machine Learning - Classifier - Naive Bayes"
+    btn_class: "btn--primary btn--small"
+  - image_path: /assets/images/data_science/marketing.png
+    alt: "Best Markets to Advertise"
+    title: "<a href='https://clarkszw.github.io/Python/Best_Markets/Best_Markets.html'>Best Markets to Advertise</a>"
+    excerpt: "By leveraging relevant data sources and analytical tools, we aim to provide actionable insights to inform the company's advertising decision-making process."
+    url: "https://clarkszw.github.io/Python/Best_Markets/Best_Markets.html"
+    btn_label: "Data Cleaning - Visualization - Business Decision"
+    btn_class: "btn--outline btn--small"
+  - image_path: /assets/images/data_science/exchange.png
+    alt: "Exchange Rates"
+    title: "<a href='https://clarkszw.github.io/Python/Exchange_Rates/Exchange_Rates.html'>Exchange Rates</a>"
+    excerpt: "In this project, we will focus on explanatory data visualization and practice how to use information design principles (familiarity and maximizing the data-ink ratio) to create better graphs for an audience."
+    url: "https://clarkszw.github.io/Python/Exchange_Rates/Exchange_Rates.html"
+    btn_label: "Visualization"
+    btn_class: "btn--primary btn--small"
+    url: "https://clarkszw.github.io/Python/Exchange_Rates/Exchange_Rates.html"
+    btn_label: "Storytelling"
+    btn_class: "btn--primary btn--small"
+    url: "https://clarkszw.github.io/Python/Exchange_Rates/Exchange_Rates.html"
+    btn_label: "Data Cleaning"
+    btn_class: "btn--primary btn--small"
+
 ---
 
 <small>Welcome to my data science portfolio page where showcases a collection of my projects on Python and R programming, machine learning algorithms, data analysis, and visualization. In this portfolio, I have worked on various datasets ranging from predicting forest fires and heart disease, to building a spam filter and analyzing New York City school data. The goal is to share my passion for data science and how it can be used to solve real-world problems. Each project demonstrates a different aspect of data science and I hope they inspire you to explore the endless possibilities of this field.</small>
@@ -85,6 +114,8 @@ feature_row_ml3:
 {% include feature_row id="feature_row_ml2" %}
 
 {% include feature_row id="feature_row_ml3" %}
+
+{% include feature_row id="feature_row_ml4" %}
 
 ## Python
 
