@@ -5,10 +5,10 @@ permalink: /about/
 ---
 
 <div class="row">
-  <div class="col-md-4">
+  <div class="col-md-4 order-md-1">
     <img src="/assets/images/about.png">
   </div>
-  <div class="col-md-8">
+  <div class="col-md-8 order-md-2">
     <h2>Hi there, my name is Clark!</h2>
     <p> I'm thrilled to welcome you to my website! I'm a cloud solution architect and data engineer, with a passion for quantum chemistry, cooking, playing basketball, and drumming.</p>
     <p>I believe that life is a continuous journey of self-discovery, and I strive to make the most out of every single day by learning new things, reading, spending quality time with my family, and embracing new challenges.</p>
