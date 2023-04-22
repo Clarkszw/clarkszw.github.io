@@ -2,13 +2,12 @@
 layout: single
 permalink: /
 author_profile: true
-title: ''
+title: ' '
 toc: true
 toc_label: "Projects"
 toc_icon: "fas fa-code-branch"
 toc_sticky: True
 header:
-  overlay_color: "#5e616c"
   image: /assets/images/index.jpg
   actions:
     - label: "Learn more"
