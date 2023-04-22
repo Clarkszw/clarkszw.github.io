@@ -2,18 +2,13 @@
 layout: single
 permalink: /
 author_profile: true
-title: ' '
+title: ''
 toc: true
 toc_label: "Projects"
 toc_icon: "fas fa-code-branch"
 toc_sticky: True
 header:
   image: /assets/images/index.jpg
-  actions:
-    - label: "Learn more"
-      url: "https://clarkszw.github.io/#portfolio-for-data-science"
-excerpt: >
-  Connecting the dots of data can reveal the truth behind the illusions of reality.
 ---
 
 # [Portfolio for Data Science](./portfolio)
