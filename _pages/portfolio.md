@@ -15,7 +15,7 @@ feature_row_ml1:
     url: https://clarkszw.github.io/Python/Handwritten_Digits_Classifier/Handritten_Digits_Classifier.html
     btn_label: "Machine Learning - Deep Learning - Optmization"
     btn_class: "btn--primary"
-  - image_path: /assets/images/data_science/forest_fire.jpg
+  - image_path: /assets/images/data_science/forest_fire.png
     alt: "Predict Forest Fires"
     title: "<a href='https://clarkszw.github.io/Python/Forest_Fires/Forest_Fires.html'>Predict Forest Fires</a>"
     excerpt: "Applying a standard linear regression model to predict the extent of fire damage to a forest. Our data comes from the Forest Fires dataset from the UCI Machine Learning Repository."
@@ -31,7 +31,7 @@ feature_row_ml1:
     btn_class: "btn--primary"
 
 feature_row_ml2:
-  - image_path: /assets/images/data_science/heart_disease.jpg
+  - image_path: /assets/images/data_science/heart_disease.png
     alt: "Classifying Heart Disease"
     title: "<a href='https://clarkszw.github.io/Python/Heart_Disease/logistic_regression.html'>Classifying Heart Disease</a>"
     excerpt: "Applying logistic regression model at a real-life dataset: the Heart Disease Data Set from the UCI Machine Learning Repository to predict heart disease."
@@ -53,6 +53,29 @@ feature_row_ml2:
     btn_label: "Machine Learning - Linear Regression - Model Evaluation"
     btn_class: "btn--primary"
 
+feature_row_ml3:
+  - image_path: /assets/images/data_science/credit_card.png
+    alt: "Credit Card Customer Segmentation"
+    title: "<a href='https://clarkszw.github.io/Python/Credit_Card_Customer/Credit_Card_Customer.html'>Credit Card Customer Segmentation</a>"
+    excerpt: "Given a dataset containing information about the company’s clients and asked to help segment them into different groups in order to apply different business strategies for each type of customer."
+    url: https://clarkszw.github.io/Python/Credit_Card_Customer/Credit_Card_Customer.html
+    btn_label: "Machine Learning - Clustering - K-Mean Algorithm"
+    btn_class: "btn--info"
+  - image_path: /assets/images/data_science/heart.png
+    alt: "Predicting Heart Diseasem"
+    title: "<a href='https://clarkszw.github.io/Python/Heart_Disease/Heart_Disease.html'>Predicting Heart Disease</a>"
+    excerpt: "Build a K-Nearest Neighbors classifier to accurately predict the likelihood of a patient having a heart disease in the future."
+    url: "https://clarkszw.github.io/Python/Heart_Disease/Heart_Disease.html"
+    btn_label: "Machine Learning - Classifier - K-Nearest Neighbors"
+    btn_class: "btn--outline"
+  - image_path: /assets/images/data_science/jeopardy.png
+    alt: "Winning Jeopardy"
+    title: "<a href='https://clarkszw.github.io/Python/Jeopardy_Questions/Jeopard_Questions.html'>Winning Jeopardy</a>"
+    excerpt: "Jeopardy is a popular TV show in the US where participants answer questions to win money. I am going to work with a dataset of Jeopardy questions to figure out some patterns in the questions that could help to win."
+    url: "https://clarkszw.github.io/Python/Jeopardy_Questions/Jeopard_Questions.html"
+    btn_label: "Machine Learning - Hypothesis Testing - Data Cleaning"
+    btn_class: "btn--light"
+
 ---
 
 <small>Welcome to my data science portfolio page where showcases a collection of my projects on Python and R programming, machine learning algorithms, data analysis, and visualization. In this portfolio, I have worked on various datasets ranging from predicting forest fires and heart disease, to building a spam filter and analyzing New York City school data. The goal is to share my passion for data science and how it can be used to solve real-world problems. Each project demonstrates a different aspect of data science and I hope they inspire you to explore the endless possibilities of this field.</small>
@@ -60,6 +83,8 @@ feature_row_ml2:
 {% include feature_row id="feature_row_ml1" %}
 
 {% include feature_row id="feature_row_ml2" %}
+
+{% include feature_row id="feature_row_ml3" %}
 
 ## Python
 
