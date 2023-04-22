@@ -24,10 +24,33 @@ feature_row_ml1:
     btn_class: "btn--primary"
   - image_path: https://s3.amazonaws.com/dq-content/755/garment-factory-unsplash.jpg
     alt: "Predicting Employee Productivity"
-    title: "Predicting Employee Productivity"
+    title: "<a href='https://clarkszw.github.io/Python/Employ_Productivity/Employ_Productivity.html'>Predicting Employee Productivity</a>"
     excerpt: "Work with a classification tree for the dataset Productivity Prediction of Garment Employees."
     url: "https://clarkszw.github.io/Python/Employ_Productivity/Employ_Productivity.html"
     btn_label: "Machine Learning - Desicion Trees - Tree Comparison"
+    btn_class: "btn--primary"
+
+feature_row_ml2:
+  - image_path: /assets/images/data_science/heart_disease.jpg
+    alt: "Classifying Heart Disease"
+    title: "<a href='https://clarkszw.github.io/Python/Heart_Disease/logistic_regression.html'>Classifying Heart Disease</a>"
+    excerpt: "Applying logistic regression model at a real-life dataset: the Heart Disease Data Set from the UCI Machine Learning Repository to predict heart disease."
+    url: https://clarkszw.github.io/Python/Heart_Disease/logistic_regression.html
+    btn_label: "Machine Learning - Logistic Regression - Exploration"
+    btn_class: "btn--primary"
+  - image_path: /assets/images/data_science/gym.png
+    alt: "Crowdedness in the Gym"
+    title: "<a href='https://clarkszw.github.io/Python/Gradient_Descent/Gradient_Descent.html'>Crowdedness in the Gym</a>"
+    excerpt: "Creating a model that can predict how many people will be at the gym at a particular day and time. That way, I will be able to enjoy my excersise routine without waiting times."
+    url: "https://clarkszw.github.io/Python/Gradient_Descent/Gradient_Descent.html"
+    btn_label: "Machine Learning - Linear Regression - Gradient Descent"
+    btn_class: "btn--primary"
+  - image_path: /assets/images/data_science/medical.png
+    alt: "Predicting Insurance"
+    title: "<a href='https://clarkszw.github.io/Python/Insurance_Costs/Insurance_Costs.html'>Predicting Insurance</a>"
+    excerpt: "This dataset contains information on individual medical insurance bills. Each bill is associated with some demographic and personal characteristics of the person who received it."
+    url: "https://clarkszw.github.io/Python/Insurance_Costs/Insurance_Costs.html"
+    btn_label: "Machine Learning - Linear Regression - Model Evaluation"
     btn_class: "btn--primary"
 
 ---
@@ -36,6 +59,7 @@ feature_row_ml1:
 
 {% include feature_row id="feature_row_ml1" %}
 
+{% include feature_row id="feature_row_ml2" %}
 
 ## Python
 
