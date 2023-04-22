@@ -7,7 +7,7 @@ collection: portfolio
 entries_layout: grid
 classes: wide
 
-feature_row1:
+feature_row_ml1:
   - image_path: https://s3.amazonaws.com/dq-content/244/nn_learns_hierarchy.png
     alt: "Digits Classifier"
     title: "Handwritten Digits Classifier"
@@ -33,7 +33,7 @@ feature_row1:
 
 Welcome to my data science portfolio page where showcases a collection of my projects on Python and R programming, machine learning algorithms, data analysis, and visualization. In this portfolio, I have worked on various datasets ranging from predicting forest fires and heart disease, to building a spam filter and analyzing New York City school data. The goal is to share my passion for data science and how it can be used to solve real-world problems. Each project demonstrates a different aspect of data science and I hope they inspire you to explore the endless possibilities of this field.
 
-{% include feature_row id="feature_row1"}
+{% include feature_row id="feature_row_ml1" %}
 
 
 ## Python
