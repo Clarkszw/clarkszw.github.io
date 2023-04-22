@@ -8,7 +8,13 @@ toc_label: "Projects"
 toc_icon: "fas fa-code-branch"
 toc_sticky: True
 header:
-  image: /assets/images/index.jpg
+  overlay_color: "#5e616c"
+  overlay_image: /assets/images/index.jpg
+  actions:
+    - label: "Learn more"
+      url: "/portfolio/"
+excerpt: >
+  Connecting the dots of data can reveal the truth behind the illusions of reality.
 ---
 
 # [Portfolio for Data Science](./portfolio)
