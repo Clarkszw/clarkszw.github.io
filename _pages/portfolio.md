@@ -80,8 +80,12 @@ feature_row_ml4:
   - image_path: /assets/images/data_science/spam.png
     alt: "Spam Filter"
     title: "Spam Filter"
-    excerpt: "Build a spam filter for SMS messages using the multinomial Naive Bayes algorithm. Our goal is to write a program that classifies new messages with an accuracy greater than 80%" <br>
-    <a href="https://clarkszw.github.io/Python/Spam_Filter/Spam_Filter.html">Python Notebook</a> <br><a href="/R/Spam/Spam.html">R Markdown</a> <br><sub><strong>Machine Learning - Classifier <br>Naive Bayes - Model Evaluation</strong></sub>"
+    excerpt: <
+      "Build a spam filter for SMS messages using the multinomial Naive Bayes algorithm. Our goal is to write a program that classifies new messages with an accuracy greater than 80%" <br>
+      <a href="https://clarkszw.github.io/Python/Spam_Filter/Spam_Filter.html">Python Notebook</a> <br>
+      <a href="/R/Spam/Spam.html">R Markdown</a> <br>
+      <sub><strong>Machine Learning - Classifier 
+      <br>Naive Bayes - Model Evaluation</strong></sub>"
   - image_path: /assets/images/data_science/marketing.png
     alt: "Best Markets to Advertise"
     title: "<a href='https://clarkszw.github.io/Python/Best_Markets/Best_Markets.html'>Best Markets to Advertise</a>"
