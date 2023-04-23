@@ -194,11 +194,11 @@ feature_row_ml4:
 
 [NYC schools](/R/NYCschools/NYCschools.html)
 
-[NY Solar Resource](/R/NYSolarResouce/NYSolarResouce.html)
+[Predicting Car Prices](/R/Predicting%20Car%20Prices/Predicting-Car-Prices.html) <sub>*Zhiwen Shi, 2022-10-27*</sub>
 
-[Predicting Car Prices](/R/Predicting%20Car%20Prices/Predicting-Car-Prices.html)
+[Spam](/R/Spam/Spam.html) <sub>*Zhiwen Shi, 2022-10-22*</sub>
 
-[Spam](/R/Spam/Spam.html)
+[NY Solar Resource](/R/NYSolarResouce/NYSolarResouce.html) <sub>*Zhiwen Shi, 2022-10-18*</sub>
 
 ---
 
