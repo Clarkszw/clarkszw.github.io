@@ -16,11 +16,10 @@ feature_row_ml1:
     <br>
     <a href="https://clarkszw.github.io/Python/Handwritten_Digits_Classifier/Handritten_Digits_Classifier.html">
       <button class="btn btn--primary btn--small">Python</button>
-    </a>
-    <br>
-        <button class="btn btn--info btn--small">Machine Learning</button>
-        <button class="btn btn--info btn--small">Classifier</button>
-        <button class="btn btn--info btn--small">Deep Learning</button>
+    </a><br>
+    <button class="btn btn--info btn--small">Machine Learning</button>
+    <button class="btn btn--info btn--small">Classifier</button>
+    <button class="btn btn--info btn--small">Deep Learning</button>
   - image_path: /assets/images/data_science/forest_fire.png
     alt: "Predict Forest Fires"
     title: "<a href='https://clarkszw.github.io/Python/Forest_Fires/Forest_Fires.html'>Predict Forest Fires</a>"
@@ -33,10 +32,10 @@ feature_row_ml1:
     <a href="/R/forestfires/forestfires.html">
       <button class="btn btn--primary btn--small">R</button>
     </a><br>
-        <button class="btn btn--info btn--small">Machine Learning</button>
-        <button class="btn btn--info btn--small">Model Selection</button>
-        <button class="btn btn--info btn--small">Data Cleaning</button>
-        <button class="btn btn--info btn--small">Cross Validation</button>
+    <button class="btn btn--info btn--small">Machine Learning</button>
+    <button class="btn btn--info btn--small">Model Selection</button>
+    <button class="btn btn--info btn--small">Data Cleaning</button>
+    <button class="btn btn--info btn--small">Cross Validation</button>
   - image_path: https://s3.amazonaws.com/dq-content/755/garment-factory-unsplash.jpg
     alt: "Predicting Employee Productivity"
     title: "<a href='https://clarkszw.github.io/Python/Employ_Productivity/Employ_Productivity.html'>Predicting Employee Productivity</a>"
@@ -46,33 +45,48 @@ feature_row_ml1:
     <a href="https://clarkszw.github.io/Python/Employ_Productivity/Employ_Productivity.html">
       <button class="btn btn--primary btn--small">Python</button>
     </a><br>
-        <button class="btn btn--info btn--small">Machine Learning</button>
-        <button class="btn btn--info btn--small">Classifier</button>
-        <button class="btn btn--info btn--small">Desicion Trees</button>
-        <button class="btn btn--info btn--small">Random Forest</button>
+    <button class="btn btn--info btn--small">Machine Learning</button>
+    <button class="btn btn--info btn--small">Classifier</button>
+    <button class="btn btn--info btn--small">Desicion Trees</button>
+    <button class="btn btn--info btn--small">Random Forest</button>
 
 feature_row_ml2:
   - image_path: /assets/images/data_science/heart_disease.png
     alt: "Classifying Heart Disease"
     title: "<a href='https://clarkszw.github.io/Python/Heart_Disease/logistic_regression.html'>Classifying Heart Disease</a>"
-    excerpt: "Applying logistic regression model at a real-life dataset: the Heart Disease Data Set from the UCI Machine Learning Repository to predict heart disease, showing how machine learning can help solve problems that have a real impact on people's lives."
-    url: https://clarkszw.github.io/Python/Heart_Disease/logistic_regression.html
-    btn_label: "Machine Learning<br>Logistic Regression"
-    btn_class: "btn--info btn--small"
+    excerpt: >
+    Applying logistic regression model at a real-life dataset: the Heart Disease Data Set from the UCI Machine Learning Repository to predict heart disease, showing how machine learning can help solve problems that have a real impact on people's lives.<br>
+    <br>
+    <a href="https://clarkszw.github.io/Python/Heart_Disease/logistic_regression.html">
+      <button class="btn btn--primary btn--small">Python</button>
+    </a><br>
+    <button class="btn btn--info btn--small">Machine Learning</button>
+    <button class="btn btn--info btn--small">Classifier</button>
+    <button class="btn btn--info btn--small">Logistic Regression</button>
+    <button class="btn btn--info btn--small">Linear Regression</button>
   - image_path: /assets/images/data_science/gym.png
     alt: "Crowdedness in the Gym"
     title: "<a href='https://clarkszw.github.io/Python/Gradient_Descent/Gradient_Descent.html'>Crowdedness in the Gym</a>"
-    excerpt: "Creating a model that can predict how many people will be at the gym at a particular day and time. That way, I will be able to enjoy my excersise routine without waiting times."
-    url: "https://clarkszw.github.io/Python/Gradient_Descent/Gradient_Descent.html"
-    btn_label: "Machine Learning<br>Stochastic Gradient Descent"
-    btn_class: "btn--info btn--small"
+    excerpt: >
+    Creating a model that can predict how many people will be at the gym at a particular day and time. That way, I will be able to enjoy my excersise routine without waiting times.<br>
+    <br>
+    <a href="https://clarkszw.github.io/Python/Gradient_Descent/Gradient_Descent.html">
+      <button class="btn btn--primary btn--small">Python</button>
+    </a><br>
+    <button class="btn btn--info btn--small">Machine Learning</button>
+    <button class="btn btn--info btn--small">Linear Regression</button>
+    <button class="btn btn--info btn--small">Stochastic Gradient Descent</button>
   - image_path: /assets/images/data_science/medical.png
     alt: "Predicting Insurance"
     title: "<a href='https://clarkszw.github.io/Python/Insurance_Costs/Insurance_Costs.html'>Predicting Insurance</a>"
-    excerpt: "This dataset contains information on individual medical insurance bills, which is associated with some demographic and personal characteristics of the person who received it."
-    url: "https://clarkszw.github.io/Python/Insurance_Costs/Insurance_Costs.html"
-    btn_label: "Machine Learning<br>Linear Regression"
-    btn_class: "btn--info btn--small"
+    excerpt: >
+    This dataset contains information on individual medical insurance bills, which is associated with some demographic and personal characteristics of the person who received it.<br>
+    <br>
+    <a href="https://clarkszw.github.io/Python/Insurance_Costs/Insurance_Costs.html">
+      <button class="btn btn--primary btn--small">Python</button>
+    </a><br>
+    <button class="btn btn--info btn--small">Machine Learning</button>
+    <button class="btn btn--info btn--small">Linear Regression</button>
 
 feature_row_ml3:
   - image_path: /assets/images/data_science/credit_card.png
