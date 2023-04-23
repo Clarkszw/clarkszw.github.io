@@ -12,7 +12,7 @@ feature_row_ml1:
     alt: "Digits Classifier"
     title: "<a href='https://clarkszw.github.io/Python/Handwritten_Digits_Classifier/Handritten_Digits_Classifier.html'>Handwritten Digits Classifier</a>"
     excerpt: >
-        Explore image classification; observe the limitations of traditional machine learning models; train, test, and improve a few different deep neural networks.<br>
+        Deep neural networks have been used to reach state-of-the-art performance on image classification tasks in the last decade. We will explore why image classification is a hard task and observe the limitations of traditional machine learning models for image classification.<br>
         <br>
         <a href="https://clarkszw.github.io/Python/Handwritten_Digits_Classifier/Handritten_Digits_Classifier.html">
         <button class="btn btn--primary btn--small">Python</button>
