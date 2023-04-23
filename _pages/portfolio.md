@@ -73,9 +73,13 @@ feature_row_ml3:
     title: "<a href='https://clarkszw.github.io/Python/Jeopardy_Questions/Jeopard_Questions.html'>Winning Jeopardy</a>"
     excerpt: >
       Jeopardy is a popular TV show in the US where participants answer questions to win money. I am going to work with a dataset of Jeopardy questions to figure out some patterns in the questions that could help to win.<br>
-      <a href="https://clarkszw.github.io/Python/Jeopardy_Questions/Jeopard_Questions.html">Python Notebook</a> <br>
-      <a href="/R/Jeopardy/Jeopardy.html">R Markdown</a> <br>
-      <sub><strong>Machine Learning, Hypothesis Testing</strong></sub>""
+      <a href="https://clarkszw.github.io/Python/Jeopardy_Questions/Jeopard_Questions.html">
+        <button>Python</button>
+      </a>
+      <a href="/R/Jeopardy/Jeopardy.html">
+        <button>R</button>
+      </a><br>
+      <sub><strong>Machine Learning, Hypothesis Testing</strong></sub>
 
 feature_row_ml4:
   - image_path: /assets/images/data_science/spam.png
@@ -185,8 +189,6 @@ feature_row_ml4:
 
 [Fandango Movie Ratings](/R/Fandango_Movie_Ratings/Fandango_Movie_Ratings.html)
 
-[Forestfires](/R/forestfires/forestfires.html)
-
 [NYC Property Sales](/R/NYC%20Property%20Sales/Linear-Modeling-.html)
 <sub>*Zhiwen Shi, 2022-11-04*</sub>
 
@@ -210,6 +212,9 @@ feature_row_ml4:
 
 [NYC schools](/R/NYCschools/NYCschools.html)
 <sub>*Zhiwen Shi, 2022-10-13*</sub>
+
+[Forestfires](/R/forestfires/forestfires.html)
+<sub>*Zhiwen Shi, 2022-10-12*</sub>
 
 ---
 
