@@ -71,21 +71,22 @@ feature_row_ml3:
   - image_path: /assets/images/data_science/jeopardy.png
     alt: "Winning Jeopardy"
     title: "<a href='https://clarkszw.github.io/Python/Jeopardy_Questions/Jeopard_Questions.html'>Winning Jeopardy</a>"
-    excerpt: "Jeopardy is a popular TV show in the US where participants answer questions to win money. I am going to work with a dataset of Jeopardy questions to figure out some patterns in the questions that could help to win."
-    url: "https://clarkszw.github.io/Python/Jeopardy_Questions/Jeopard_Questions.html"
-    btn_label: "Machine Learning<br>Hypothesis Testing"
-    btn_class: "btn--info btn--small"
+    excerpt: >
+      Jeopardy is a popular TV show in the US where participants answer questions to win money. I am going to work with a dataset of Jeopardy questions to figure out some patterns in the questions that could help to win.<br>
+      <a href="https://clarkszw.github.io/Python/Jeopardy_Questions/Jeopard_Questions.html">Python Notebook</a> <br>
+      <a href="/R/Jeopardy/Jeopardy.html">R Markdown</a> <br>
+      <sub><strong>Machine Learning, Hypothesis Testing</strong></sub>""
 
 feature_row_ml4:
   - image_path: /assets/images/data_science/spam.png
     alt: "Spam Filter"
-    title: "Spam Filter"
-    excerpt: <
-      "Build a spam filter for SMS messages using the multinomial Naive Bayes algorithm. Our goal is to write a program that classifies new messages with an accuracy greater than 80%" <br>
+    title: "<a href='https://clarkszw.github.io/Python/Spam_Filter/Spam_Filter.html'>Spam Filter</a>"
+    excerpt: >
+      Build a spam filter for SMS messages using the multinomial Naive Bayes algorithm. Our goal is to write a program that classifies new messages with an accuracy greater than 80%.<br>
       <a href="https://clarkszw.github.io/Python/Spam_Filter/Spam_Filter.html">Python Notebook</a> <br>
       <a href="/R/Spam/Spam.html">R Markdown</a> <br>
-      <sub><strong>Machine Learning - Classifier 
-      <br>Naive Bayes - Model Evaluation</strong></sub>"
+      <sub><strong>Machine Learning, Classifier 
+      <br>Naive Bayes, Model Evaluation</strong></sub>
   - image_path: /assets/images/data_science/marketing.png
     alt: "Best Markets to Advertise"
     title: "<a href='https://clarkszw.github.io/Python/Best_Markets/Best_Markets.html'>Best Markets to Advertise</a>"
@@ -186,21 +187,29 @@ feature_row_ml4:
 
 [Forestfires](/R/forestfires/forestfires.html)
 
+[NYC Property Sales](/R/NYC%20Property%20Sales/Linear-Modeling-.html)
+<sub>*Zhiwen Shi, 2022-11-04*</sub>
+
+[Predicting Car Prices](/R/Predicting%20Car%20Prices/Predicting-Car-Prices.html)
+<sub>*Zhiwen Shi, 2022-10-27*</sub>
+
 [Jeopardy](/R/Jeopardy/Jeopardy.html)
+<sub>*Zhiwen Shi, 2022-10-23*</sub>
+
+[Spam](/R/Spam/Spam.html)
+<sub>*Zhiwen Shi, 2022-10-22*</sub>
 
 [Lottery](/R/lottery/649.html)
+<sub>*Zhiwen Shi, 2022-10-22*</sub>
 
 [Movie Ratings](/R/Movie%20Ratings/MovieRating.html)
+<sub>*Zhiwen Shi, 2022-10-19*</sub>
 
-[NYC Property Sales](/R/NYC%20Property%20Sales/Linear-Modeling-.html)
+[NY Solar Resource](/R/NYSolarResouce/NYSolarResouce.html)
+<sub>*Zhiwen Shi, 2022-10-18*</sub>
 
 [NYC schools](/R/NYCschools/NYCschools.html)
-
-[Predicting Car Prices](/R/Predicting%20Car%20Prices/Predicting-Car-Prices.html) <sub>*Zhiwen Shi, 2022-10-27*</sub>
-
-[Spam](/R/Spam/Spam.html) <sub>*Zhiwen Shi, 2022-10-22*</sub>
-
-[NY Solar Resource](/R/NYSolarResouce/NYSolarResouce.html) <sub>*Zhiwen Shi, 2022-10-18*</sub>
+<sub>*Zhiwen Shi, 2022-10-13*</sub>
 
 ---
 
