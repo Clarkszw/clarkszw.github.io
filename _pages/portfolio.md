@@ -8,7 +8,7 @@ entries_layout: grid
 classes: wide
 
 feature_row_ml1:
-  - image_path: https://s3.amazonaws.com/dq-content/244/nn_learns_hierarchy.png
+  - image_path: /assets/images/data_science/handwritten.png
     alt: "Digits Classifier"
     title: "<a href='https://clarkszw.github.io/Python/Handwritten_Digits_Classifier/Handritten_Digits_Classifier.html'>Handwritten Digits Classifier</a>"
     excerpt: "Explore image classification; observe the limitations of traditional machine learning models; train, test, and improve a few different deep neural networks"
@@ -34,7 +34,7 @@ feature_row_ml1:
   - image_path: https://s3.amazonaws.com/dq-content/755/garment-factory-unsplash.jpg
     alt: "Predicting Employee Productivity"
     title: "<a href='https://clarkszw.github.io/Python/Employ_Productivity/Employ_Productivity.html'>Predicting Employee Productivity</a>"
-    excerpt: "Work with a classification tree for the dataset Productivity Prediction of Garment Employees."
+    excerpt: "Satisfying the huge global demand for garment products is mostly dependent on the production and delivery performance of the employees in the garment manufacturing companies."
     url: "https://clarkszw.github.io/Python/Employ_Productivity/Employ_Productivity.html"
     btn_label: "Machine Learning<br>Desicion Trees"
     btn_class: "btn--info btn--small"
