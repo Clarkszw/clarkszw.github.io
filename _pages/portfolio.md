@@ -18,10 +18,19 @@ feature_row_ml1:
   - image_path: /assets/images/data_science/forest_fire.png
     alt: "Predict Forest Fires"
     title: "<a href='https://clarkszw.github.io/Python/Forest_Fires/Forest_Fires.html'>Predict Forest Fires</a>"
-    excerpt: "Applying a standard linear regression model to predict the extent of fire damage to a forest. Our data comes from the Forest Fires dataset from the UCI Machine Learning Repository."
-    url: "https://clarkszw.github.io/Python/Forest_Fires/Forest_Fires.html"
-    btn_label: "Machine Learning<br>Model Selection"
-    btn_class: "btn--info btn--small"
+    excerpt: >
+    Applying a standard linear regression model to predict the extent of fire damage to a forest. Our data comes from the Forest Fires dataset from the UCI Machine Learning Repository.<br>
+    <br>
+    <a href="https://clarkszw.github.io/Python/Forest_Fires/Forest_Fires.html">
+      <button class="btn btn--primary btn--small">Python</button>
+    </a>
+    <a href="/R/forestfires/forestfires.html">
+      <button class="btn btn--primary btn--small">R</button>
+    </a><br>
+        <button class="btn btn--info btn--small">Machine Learning</button>
+        <button class="btn btn--info btn--small">Model Selection</button>
+        <button class="btn btn--info btn--small">Data Cleaning</button>
+        <button class="btn btn--info btn--small">Cross Validation</button>
   - image_path: https://s3.amazonaws.com/dq-content/755/garment-factory-unsplash.jpg
     alt: "Predicting Employee Productivity"
     title: "<a href='https://clarkszw.github.io/Python/Employ_Productivity/Employ_Productivity.html'>Predicting Employee Productivity</a>"
@@ -88,7 +97,7 @@ feature_row_ml4:
     alt: "Spam Filter"
     title: "<a href='https://clarkszw.github.io/Python/Spam_Filter/Spam_Filter.html'>Spam Filter</a>"
     excerpt: >
-      Build a spam filter for SMS messages using the multinomial Naive Bayes algorithm. Our goal is to write a program that classifies new messages with an accuracy greater than 80%.
+      Build a spam filter for SMS messages using the multinomial Naive Bayes algorithm. Our goal is to write a program that classifies new messages with an accuracy greater than 80%.<br>
       <br>
       <a href="https://clarkszw.github.io/Python/Spam_Filter/Spam_Filter.html">
         <button class="btn btn--primary btn--small">Python</button>
@@ -103,10 +112,18 @@ feature_row_ml4:
   - image_path: /assets/images/data_science/marketing.png
     alt: "Best Markets to Advertise"
     title: "<a href='https://clarkszw.github.io/Python/Best_Markets/Best_Markets.html'>Best Markets to Advertise</a>"
-    excerpt: "By leveraging relevant data sources and analytical tools, we aim to provide actionable insights to inform the company's advertising decision-making process."
-    url: "https://clarkszw.github.io/Python/Best_Markets/Best_Markets.html"
-    btn_label: "Data Cleaning - Visualization<br>Data Based Decision"
-    btn_class: "btn--info btn--small"
+    excerpt: >
+      By leveraging relevant data sources and analytical tools, we aim to provide actionable insights to inform the company's advertising decision-making process.<br>
+      <br>
+      <a href="https://clarkszw.github.io/Python/Best_Markets/Best_Markets.html">
+        <button class="btn btn--primary btn--small">Python</button>
+      </a>
+      <a href="/R/BestMarket/BestMarket.html">
+        <button class="btn btn--primary btn--small">R</button>
+      </a><br>
+      <button class="btn btn--info btn--small">Data Cleaning</button>
+      <button class="btn btn--info btn--small">Data Visualization</button>
+      <button class="btn btn--info btn--small">Data-driven Decision-making</button>    
   - image_path: /assets/images/data_science/exchange.png
     alt: "Exchange Rates"
     title: "<a href='https://clarkszw.github.io/Python/Exchange_Rates/Exchange_Rates.html'>Exchange Rates</a>"
@@ -114,7 +131,6 @@ feature_row_ml4:
     url: "https://clarkszw.github.io/Python/Exchange_Rates/Exchange_Rates.html"
     btn_label: "Visualization - Storytelling<br>Data Cleaning - Rolling Mean"
     btn_class: "btn--info btn--small"
-
 
 ---
 
@@ -133,70 +149,83 @@ feature_row_ml4:
 ### Machine Learning
 
 [Building A Handwritten Digits Classifier **Deep Learning**](/Python/Handwritten_Digits_Classifier/Handritten_Digits_Classifier.html)
+<sub>*Zhiwen Shi, 2023-04-24*</sub>
 
 [Optimizing Model Prediction: Predict Forest Fires](/Python/Forest_Fires/Forest_Fires.html)
+<sub>*Zhiwen Shi, 2023-04-21*</sub>
 
 [Tree Models: Predicting Employee Productivity](/Python/Employ_Productivity/Employ_Productivity.html)
+<sub>*Zhiwen Shi, 2023-04-15*</sub>
 
 [Logistic Regression Modeling: Classifying Heart Disease](/Python/Heart_Disease/logistic_regression.html)
+<sub>*Zhiwen Shi, 2023-04-10*</sub>
 
 [Stochastic Gradient Descent: Crowdedness in the Gym](/Python/Gradient_Descent/Gradient_Descent.html)
+<sub>*Zhiwen Shi, 2023-04-02*</sub>
 
 [Linear Regression Modeling: Predicting Insurance Costs](/Python/Insurance_Costs/Insurance_Costs.html)
+<sub>*Zhiwen Shi, 2023-03-28*</sub>
 
 [K-Mean Algorithm: Credit Card Customer Segmentation](/Python/Credit_Card_Customer/Credit_Card_Customer.html)
+<sub>*Zhiwen Shi, 2023-03-22*</sub>
 
 [K-Nearest Neighbors Classifier: Predicting Heart Disease](/Python/Heart_Disease/Heart_Disease.html)
+<sub>*Zhiwen Shi, 2023-03-14*</sub>
 
 [Hypothesis Testing: Jeopardy Questions](/Python/Jeopardy_Questions/Jeopard_Questions.html)
+<sub>*Zhiwen Shi, 2023-03-07*</sub>
 
 [Building a Spam Filter with Naive Bayes](/Python/Spam_Filter/Spam_Filter.html)
+<sub>*Zhiwen Shi, 2023-03-02*</sub>
 
 ### Public Data Sources
 
 [Finding the Best Two Markets to Advertise In](/Python/Best_Markets/Best_Markets.html)
+<sub>*Zhiwen Shi, 2023-02-27*</sub>
 
 [Storytelling Data Visualization on Exchange Rates](/Python/Exchange_Rates/Exchange_Rates.html)
+<sub>*Zhiwen Shi, 2023-02-22*</sub>
 
 [Popular Data Science Questions](/Python/Popular_DS_Questions/Popular_DS_Questions.html)
+<sub>*Zhiwen Shi, 2023-02-13*</sub>
 
 [Is Fandango Still Inflating Ratings?](/Python/Fandango/Fandango.html)
+<sub>*Zhiwen Shi, 2023-02-05*</sub>
 
 [Analyzing New York City School Data](/Python/NYCschools/NYCschools.html)
+<sub>*Zhiwen Shi, 2023-01-28*</sub>
 
 [Star Wars Survey](/Python/Star_Wars_Survey/Star_Wars_Survey.html)
+<sub>*Zhiwen Shi, 2023-01-23*</sub>
 
 [Answering Business Questions Using **SQL**](/Python/Chinook/Chinook.html)
+<sub>*Zhiwen Shi, 2023-01-15*</sub>
 
 [Analyzing CIA Factbook Data Using **SQL**](/Python/CIA_Factbook/CIA_Factbook.html)
+<sub>*Zhiwen Shi, 2023-01-03*</sub>
 
 [Clean and Analyze Employee Exit Surveys](/Python/Employee_Exit_Survey/Employee_Exit_Survey.html)
+<sub>*Zhiwen Shi, 2022-12-12*</sub>
 
 [Indicators of Heavy Traffic on I-94](/Python/Heavy_Traffic/Indicators_of_Heavy_Traffic.html)
+<sub>*Zhiwen Shi, 2022-12-5*</sub>
 
 [Mobile App for Lottery Addiction](/Python/Lottery/Lottery.html)
+<sub>*Zhiwen Shi, 2022-11-30*</sub>
 
 [eBay Car Sales Data Exploration](/Python/eBay%20Car%20Sales/ebay%20Car%20Sales.html)
+<sub>*Zhiwen Shi, 2022-11-25*</sub>
 
 [Hacker News](/Python/hacker%20news/hacker_news.html)
+<sub>*Zhiwen Shi, 2022-11-20*</sub>
 
 [Prison Break](/Python/Prison%20Break/PrisenBreak.html)
+<sub>*Zhiwen Shi, 2022-11-15*</sub>
 
 [Profitable App Profiles](/Python/Profitable%20App%20Profiles/Profitable%20App%20Profiles.html)
+<sub>*Zhiwen Shi, 2022-11-11*</sub>
 
 ## R
-
-[BestMarket](/R/BestMarket/BestMarket.html)
-
-[Book sales data](/R/book_sales_data/Book_sales.html)
-
-[Book reviews](/R/book_reviews/book_review.html)
-
-[Chinook](/R/Chinook/Chinook.html)
-
-[COVID19](/R/COVID19/CovidProject.html)
-
-[Fandango Movie Ratings](/R/Fandango_Movie_Ratings/Fandango_Movie_Ratings.html)
 
 [NYC Property Sales](/R/NYC%20Property%20Sales/Linear-Modeling-.html)
 <sub>*Zhiwen Shi, 2022-11-04*</sub>
@@ -207,11 +236,17 @@ feature_row_ml4:
 [Jeopardy](/R/Jeopardy/Jeopardy.html)
 <sub>*Zhiwen Shi, 2022-10-23*</sub>
 
+[BestMarket](/R/BestMarket/BestMarket.html)
+<sub>*Zhiwen Shi, 2022-10-21*</sub>
+
 [Spam](/R/Spam/Spam.html)
 <sub>*Zhiwen Shi, 2022-10-22*</sub>
 
 [Lottery](/R/lottery/649.html)
 <sub>*Zhiwen Shi, 2022-10-22*</sub>
+
+[Fandango Movie Ratings](/R/Fandango_Movie_Ratings/Fandango_Movie_Ratings.html)
+<sub>*Zhiwen Shi, 2022-10-20*</sub>
 
 [Movie Ratings](/R/Movie%20Ratings/MovieRating.html)
 <sub>*Zhiwen Shi, 2022-10-19*</sub>
@@ -219,11 +254,23 @@ feature_row_ml4:
 [NY Solar Resource](/R/NYSolarResouce/NYSolarResouce.html)
 <sub>*Zhiwen Shi, 2022-10-18*</sub>
 
+[Chinook](/R/Chinook/Chinook.html)
+<sub>*Zhiwen Shi, 2022-10-15*</sub>
+
 [NYC schools](/R/NYCschools/NYCschools.html)
 <sub>*Zhiwen Shi, 2022-10-13*</sub>
 
 [Forestfires](/R/forestfires/forestfires.html)
 <sub>*Zhiwen Shi, 2022-10-12*</sub>
+
+[Book reviews](/R/book_reviews/book_review.html)
+<sub>*Zhiwen Shi, 2022-10-11*</sub>
+
+[Book sales data](/R/book_sales_data/Book_sales.html)
+<sub>*Zhiwen Shi, 2022-10-11*</sub>
+
+[COVID19](/R/COVID19/CovidProject.html)
+<sub>*Zhiwen Shi, 2022-10-10*</sub>
 
 ---
 
