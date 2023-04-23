@@ -18,7 +18,6 @@ feature_row_ml1:
         <button class="btn btn--primary btn--small">Python</button>
         </a><br>
         <button class="btn btn--info btn--small">Machine Learning</button>
-        <button class="btn btn--info btn--small">Classifier</button>
         <button class="btn btn--info btn--small">Deep Learning</button>
   - image_path: /assets/images/data_science/forest_fire.png
     alt: "Predict Forest Fires"
@@ -92,17 +91,27 @@ feature_row_ml3:
   - image_path: /assets/images/data_science/credit_card.png
     alt: "Credit Card Customer Segmentation"
     title: "<a href='https://clarkszw.github.io/Python/Credit_Card_Customer/Credit_Card_Customer.html'>Credit Card Customer Segmentation</a>"
-    excerpt: "Given a dataset containing information about the company’s clients and asked to help segment them into different groups in order to apply different business strategies for each type of customer."
-    url: https://clarkszw.github.io/Python/Credit_Card_Customer/Credit_Card_Customer.html
-    btn_label: "Machine Learning - Clustering<br>K-Mean Algorithm"
-    btn_class: "btn--info btn--small"
+    excerpt: >
+        Given a dataset containing information about the company’s clients and asked to help segment them into different groups in order to apply different business strategies for each type of customer.<br>
+        <br>
+        <a href="https://clarkszw.github.io/Python/Credit_Card_Customer/Credit_Card_Customer.html">
+        <button class="btn btn--primary btn--small">Python</button>
+        </a><br>
+        <button class="btn btn--info btn--small">Machine Learning</button>
+        <button class="btn btn--info btn--small">Clustering</button>
+        <button class="btn btn--info btn--small">K-Mean Algorithm</button>
   - image_path: /assets/images/data_science/heart.png
     alt: "Predicting Heart Disease"
     title: "<a href='https://clarkszw.github.io/Python/Heart_Disease/Heart_Disease.html'>Predicting Heart Disease</a>"
-    excerpt: "Build a K-Nearest Neighbors classifier to accurately predict the likelihood of a patient having a heart disease in the future. It is imperative to identify these risk factors early on to prevent the onset of CVDs and reduce premature deaths"
-    url: "https://clarkszw.github.io/Python/Heart_Disease/Heart_Disease.html"
-    btn_label: "Machine Learning - Classifier<br>K-Nearest Neighbors"
-    btn_class: "btn--info btn--small"
+    excerpt: >
+        Build a K-Nearest Neighbors classifier to accurately predict the likelihood of a patient having a heart disease in the future. It is imperative to identify these risk factors early on to prevent the onset of CVDs and reduce premature deaths.<br>
+        <br>
+        <a href="https://clarkszw.github.io/Python/Heart_Disease/Heart_Disease.html">
+        <button class="btn btn--primary btn--small">Python</button>
+        </a><br>
+        <button class="btn btn--info btn--small">Machine Learning</button>
+        <button class="btn btn--info btn--small">Classifier</button>
+        <button class="btn btn--info btn--small">K-Nearest Neighbors</button>
   - image_path: /assets/images/data_science/jeopardy.png
     alt: "Winning Jeopardy"
     title: "<a href='https://clarkszw.github.io/Python/Jeopardy_Questions/Jeopard_Questions.html'>Winning Jeopardy</a>"
@@ -153,10 +162,15 @@ feature_row_ml4:
   - image_path: /assets/images/data_science/exchange.png
     alt: "Exchange Rates"
     title: "<a href='https://clarkszw.github.io/Python/Exchange_Rates/Exchange_Rates.html'>Exchange Rates</a>"
-    excerpt: "In this project, we will focus on explanatory data visualization and practice how to use information design principles (familiarity and maximizing the data-ink ratio) to create better graphs for an audience."
-    url: "https://clarkszw.github.io/Python/Exchange_Rates/Exchange_Rates.html"
-    btn_label: "Visualization - Storytelling<br>Data Cleaning - Rolling Mean"
-    btn_class: "btn--info btn--small"
+    excerpt: >
+        In this project, we will focus on explanatory data visualization and practice how to use information design principles (familiarity and maximizing the data-ink ratio) to create better graphs for an audience.<br>
+        <br>
+        <a href="https://clarkszw.github.io/Python/Exchange_Rates/Exchange_Rates.html">
+        <button class="btn btn--primary btn--small">Python</button>
+        </a><br>
+        <button class="btn btn--info btn--small">Data Cleaning</button>
+        <button class="btn btn--info btn--small">Data Visualization</button>
+        <button class="btn btn--info btn--small">Information Design Principles</button>
 
 ---
 
