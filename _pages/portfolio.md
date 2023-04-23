@@ -80,9 +80,8 @@ feature_row_ml3:
       <a href="/R/Jeopardy/Jeopardy.html">
         <button class="btn btn--primary btn--small">R</button>
       </a><br>
-    url: "https://clarkszw.github.io/Python/Jeopardy_Questions/Jeopard_Questions.html"
-    btn_label: "Machine Learning, Hypothesis Testing"
-    btn_class: "btn--info btn--small"
+        <button class="btn btn--info btn--small">Machine Learning</button>
+        <button class="btn btn--info btn--small">Hypothesis Testing</button>
 
 feature_row_ml4:
   - image_path: /assets/images/data_science/spam.png
@@ -92,14 +91,15 @@ feature_row_ml4:
       Build a spam filter for SMS messages using the multinomial Naive Bayes algorithm. Our goal is to write a program that classifies new messages with an accuracy greater than 80%.
       <br>
       <a href="https://clarkszw.github.io/Python/Spam_Filter/Spam_Filter.html">
-        <button>Python</button>
+        <button class="btn btn--primary btn--small">Python</button>
       </a>
       <a href="/R/Spam/Spam.html">
-        <button>R</button>
+        <button class="btn btn--primary btn--small">R</button>
       </a><br>
-    url: "https://clarkszw.github.io/Python/Spam_Filter/Spam_Filter.html"
-    btn_label: "Machine Learning - Classifier<br>Naive Bayes - Model Evaluation"
-    btn_class: "btn--info btn--small"
+      <button class="btn btn--info btn--small">Machine Learning</button>
+      <button class="btn btn--info btn--small">Classifier</button>
+      <button class="btn btn--info btn--small">Naive Bayes</button>
+      <button class="btn btn--info btn--small">Model Evaluation</button>
   - image_path: /assets/images/data_science/marketing.png
     alt: "Best Markets to Advertise"
     title: "<a href='https://clarkszw.github.io/Python/Best_Markets/Best_Markets.html'>Best Markets to Advertise</a>"
